@@ -1,0 +1,18 @@
+[
+	{"pic":"img/word.gif","name":"word文件","date":"2017/1/17","user":"刘明","state":"img/download.gif","className":"downloadLogo"},
+	{"pic":"img/pdf.gif","name":"pdf文件","date":"2017/1/18","user":"张三","state":"img/download.gif","className":"downloadLogo"},
+	{"pic":"img/video.gif","name":"video文件","date":"2017/1/19","user":"李四","state":"img/file.gif","className":"fileLogo"},
+	{"pic":"img/zip.gif","name":"zip文件","date":"2017/1/20","user":"王五","state":"img/download.gif","className":"downloadLogo"},
+	{"pic":"img/word.gif","name":"word文件","date":"2017/1/17","user":"刘明","state":"img/download.gif","className":"downloadLogo"},
+	{"pic":"img/pdf.gif","name":"pdf文件","date":"2017/1/18","user":"张三","state":"img/download.gif","className":"downloadLogo"},
+	{"pic":"img/video.gif","name":"video文件","date":"2017/1/19","user":"李四","state":"img/file.gif","className":"fileLogo"},
+	{"pic":"img/zip.gif","name":"zip文件","date":"2017/1/20","user":"王五","state":"img/download.gif","className":"downloadLogo"},
+	{"pic":"img/word.gif","name":"word文件","date":"2017/1/17","user":"刘明","state":"img/download.gif","className":"downloadLogo"},
+	{"pic":"img/pdf.gif","name":"pdf文件","date":"2017/1/18","user":"张三","state":"img/download.gif","className":"downloadLogo"},
+	{"pic":"img/video.gif","name":"video文件","date":"2017/1/19","user":"李四","state":"img/file.gif","className":"fileLogo"},
+	{"pic":"img/zip.gif","name":"zip文件","date":"2017/1/20","user":"王五","state":"img/download.gif","className":"downloadLogo"},
+	{"pic":"img/word.gif","name":"word文件","date":"2017/1/17","user":"刘明","state":"img/download.gif","className":"downloadLogo"},
+	{"pic":"img/pdf.gif","name":"pdf文件","date":"2017/1/18","user":"张三","state":"img/download.gif","className":"downloadLogo"},
+	{"pic":"img/video.gif","name":"video文件","date":"2017/1/19","user":"李四","state":"img/file.gif","className":"fileLogo"},
+	{"pic":"img/zip.gif","name":"zip文件","date":"2017/1/20","user":"王五","state":"img/download.gif","className":"downloadLogo"}
+]

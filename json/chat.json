@@ -1,0 +1,80 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "mySelf":{
+    "name":"刘警官","tel":"15155545554","img":"img/test3.jpg","section":"行政部","position":"湖南分局"
+  },
+  "msg": {
+    "liu1":{"name":"刘警官","tel":"13054564544","section":"行政部","position":"湖南分局"},
+    "zhao1":{"name":"赵警官","tel":"12054564544","section":"技术部","position":"湖南分局"},
+    "zhang1":{"name":"张警官","tel":"14054564544","section":"人事部","position":"湖南分局"},
+    "wang1":{"name":"王警官","tel":"15054564544","section":"关系部","position":"湖南分局"},
+    "wang2":{"name":"王警官","tel":"12054562244","section":"酱油部","position":"湖南分局"}
+  },
+
+  "person":[
+    {"id":"liu1","name":"刘警官","img":"img/test1.jpg"},
+    {"id":"zhao1","name":"赵警官","img":"img/test2.jpg"},
+    {"id":"zhang1","name":"张警官","img":"img/test3.jpg"},
+    {"id":"wang1","name":"王警官","img":"img/test2.jpg"},
+    {"id":"wang2","name":"王警官","img":"img/test2.jpg"}
+  ],
+  "chatting":{
+    "liu1":[
+      {"class":"your_talk","name":"刘警官","img":"img/test1.jpg","span":"1234563"},
+      {"class":"my_talk","name":"刘警官","img":"img/test3.jpg","span":"3456"},
+      {"class":"your_talk","name":"刘警官","img":"img/test1.jpg","span":"146513"},
+      {"class":"your_talk","name":"刘警官","img":"img/test1.jpg","span":"56846"},
+      {"class":"my_talk","name":"刘警官","img":"img/test3.jpg","span":"32123"},
+      {"class":"your_talk","name":"刘警官","img":"img/test1.jpg","span":"8476"},
+      {"class":"my_talk","name":"刘警官","img":"img/test3.jpg","span":"47861"},
+      {"class":"my_talk","name":"刘警官","img":"img/test3.jpg","span":"879841"}
+    ],
+    "zhao1":[
+      {"class":"your_talk","name":"赵警官","img":"img/test2.jpg","span":"赵警官"},
+      {"class":"my_talk","name":"刘警官","img":"img/test3.jpg","span":"3456"},
+      {"class":"your_talk","name":"赵警官","img":"img/test2.jpg","span":"146513"},
+      {"class":"your_talk","name":"赵警官","img":"img/test2.jpg","span":"56846"},
+      {"class":"my_talk","name":"刘警官","img":"img/test3.jpg","span":"赵警官"},
+      {"class":"your_talk","name":"赵警官","img":"img/test2.jpg","span":"8476"},
+      {"class":"my_talk","name":"刘警官","img":"img/test3.jpg","span":"47861"},
+      {"class":"my_talk","name":"刘警官","img":"img/test3.jpg","span":"879841"}
+    ],
+    "zhang1":[
+      {"class":"your_talk","name":"张警官","img":"img/test3.jpg","span":"张警官"},
+      {"class":"my_talk","name":"刘警官","img":"img/test3.jpg","span":"3456"},
+      {"class":"your_talk","name":"张警官","img":"img/test3.jpg","span":"146513"},
+      {"class":"your_talk","name":"张警官","img":"img/test3.jpg","span":"56846"},
+      {"class":"my_talk","name":"刘警官","img":"img/test3.jpg","span":"张警官"},
+      {"class":"your_talk","name":"张警官","img":"img/test3.jpg","span":"8476"},
+      {"class":"my_talk","name":"刘警官","img":"img/test3.jpg","span":"47861"},
+      {"class":"my_talk","name":"刘警官","img":"img/test3.jpg","span":"879841"}
+    ],
+    "wang1":[
+      {"class":"your_talk","name":"王警官","img":"img/test2.jpg","span":"王警官"},
+      {"class":"my_talk","name":"刘警官","img":"img/test3.jpg","span":"3456"},
+      {"class":"your_talk","name":"王警官","img":"img/test2.jpg","span":"146513"},
+      {"class":"your_talk","name":"王警官","img":"img/test2.jpg","span":"56846"},
+      {"class":"my_talk","name":"刘警官","img":"img/test3.jpg","span":"张警官"},
+      {"class":"your_talk","name":"王警官","img":"img/test2.jpg","span":"8476"},
+      {"class":"my_talk","name":"刘警官","img":"img/test3.jpg","span":"47861"},
+      {"class":"my_talk","name":"刘警官","img":"img/test3.jpg","span":"879841"}
+    ],
+    "wang2":[
+      {"class":"your_talk","name":"王警官","img":"img/test2.jpg","span":"张警官"},
+      {"class":"my_talk","name":"刘警官","img":"img/test3.jpg","span":"3456"},
+      {"class":"your_talk","name":"王警官","img":"img/test2.jpg","span":"146513"},
+      {"class":"your_talk","name":"王警官","img":"img/test2.jpg","span":"56846"},
+      {"class":"my_talk","name":"刘警官","img":"img/test3.jpg","span":"张警官"},
+      {"class":"your_talk","name":"王警官","img":"img/test2.jpg","span":"8476"},
+      {"class":"my_talk","name":"刘警官","img":"img/test3.jpg","span":"47861"},
+      {"class":"my_talk","name":"刘警官","img":"img/test3.jpg","span":"879841"}
+    ]
+  }
+}

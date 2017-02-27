@@ -1,0 +1,1416 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+i,
+em {
+  font-style: normal;
+}
+ul {
+  list-style: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+label,
+i,
+select,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] {
+  cursor: pointer;
+}
+.scrollbar-style::-webkit-scrollbar {
+  width: .05rem;
+}
+.scrollbar-style::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 0.06rem rgba(0, 0, 0, 0.3);
+  border-radius: .1rem;
+  background-color: #F5F5F5;
+}
+.scrollbar-style::-webkit-scrollbar-thumb {
+  border-radius: .1rem;
+  -webkit-box-shadow: inset 0 0 0.06rem rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+.focus {
+  border: .005rem solid #0a7a89;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  position: relative;
+  background-image: url("../img/bg.jpg");
+  background-size: 100% 100%;
+  width: 19.2rem;
+  height: 100%;
+  font-family: "微软雅黑";
+  font-size: .12rem;
+}
+.hide {
+  display: none;
+}
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+  color: #1fb0c2;
+}
+.msg {
+  display: none;
+  position: absolute;
+  left: -50%;
+  top: 50%;
+  width: 1.2rem;
+  height: auto;
+  background: #0a7a89;
+  border-radius: .05rem;
+  box-shadow: 0 0 0.05rem #0a7a89;
+}
+.msg p {
+  color: #fff;
+  font-size: .14rem;
+  line-height: .33rem;
+  text-align: center;
+}
+.ipnutT {
+  border-radius: .04rem;
+  border: none;
+  border: 0.005rem solid #ccc;
+  padding: .04rem .1rem;
+}
+.qqFace {
+  background: #fff;
+  box-shadow: 0 0 0.01rem #ccc;
+  top: 4.4rem!important;
+  left: 2.80rem!important;
+}
+.qqFace td {
+  border-right: 0.01rem solid #eee;
+  border-bottom: 0.01rem solid #eee;
+  cursor: pointer;
+}
+.box {
+  position: absolute;
+  width: 10rem;
+  height: 7.6rem;
+  left: 50%;
+  top: 50%;
+  margin-left: -5rem;
+  margin-top: -3.8rem;
+  /*******发起群聊 拉好友弹出框*******/
+}
+.box .boxLeft {
+  width: 2.6rem;
+  height: 100%;
+  float: left;
+  position: relative;
+  background: #0a7a89;
+}
+.box .boxLeft header {
+  position: relative;
+  width: 2.3rem;
+  height: .48rem;
+  padding: .25rem .15rem;
+}
+.box .boxLeft header img {
+  width: .48rem;
+  height: .48rem;
+  border-radius: 50% 50%;
+  -webkit-border-radius: 50% 50%;
+  -moz-border-radius: 50% 50%;
+  float: left;
+}
+.box .boxLeft header span {
+  font-size: .16rem;
+  line-height: .48rem;
+  float: left;
+  margin-left: .16rem;
+  color: #fff;
+}
+.box .boxLeft header svg {
+  width: .2rem;
+  height: .2rem;
+  float: right;
+  margin-top: .14rem;
+}
+.box .boxLeft header .settingNav {
+  position: absolute;
+  top: .6rem;
+  right: .1rem;
+  width: 1.1rem;
+  height: 1.2rem;
+  background: #fff;
+  z-index: 2;
+  border-radius: .05rem;
+  box-shadow: 0 0 0.05rem #000;
+}
+.box .boxLeft header .settingNav li {
+  width: 100%;
+  height: 25%;
+}
+.box .boxLeft header .settingNav li svg {
+  width: .15rem;
+  height: .15rem;
+  margin: .075rem .08rem;
+  float: left;
+  color: #000;
+}
+.box .boxLeft header .settingNav li span {
+  font-size: .12rem;
+  line-height: .3rem;
+  margin: 0;
+  color: #000;
+}
+.box .boxLeft header .settingNav li span.exit {
+  padding-right: .23rem;
+}
+.box .boxLeft header .settingNav li span span {
+  margin: .1rem 0;
+  float: right;
+  border-width: .05rem;
+  border-color: transparent transparent transparent #c9c9c9;
+  border-style: dashed dashed dashed solid;
+}
+.box .boxLeft header .settingNav li:hover {
+  background: #30ddf8;
+}
+.box .boxLeft header .settingNav li:hover svg,
+.box .boxLeft header .settingNav li:hover span {
+  color: #fff;
+  cursor: default;
+}
+.box .boxLeft header .settingNav li:hover svg span,
+.box .boxLeft header .settingNav li:hover span span {
+  border-color: transparent transparent transparent #fff;
+}
+.box .boxLeft header .settingNav li .settingNav2 {
+  width: 80%;
+  height: 2rem;
+  background: #fff;
+  display: none;
+  position: absolute;
+  left: 105%;
+  border-radius: .05rem;
+  box-shadow: 0 0 0.05rem #000;
+}
+.box .boxLeft header .settingNav li .settingNav2 li {
+  height: .25rem;
+  text-align: center;
+  font-size: .12rem;
+  line-height: .25rem;
+  cursor: pointer;
+}
+.box .boxLeft header .headerMsg {
+  display: none;
+  position: absolute;
+  left: -50%;
+  top: 50%;
+  width: 1.2rem;
+  height: auto;
+  background: #0a7a89;
+  border-radius: .05rem;
+  box-shadow: 0 0 0.05rem #0a7a89;
+}
+.box .boxLeft header .headerMsg p {
+  font-size: .14rem;
+  color: #fff;
+  line-height: .33rem;
+  text-align: center;
+}
+.box .boxLeft .search {
+  width: 2.6rem;
+  height: .32rem;
+  position: relative;
+}
+.box .boxLeft .search .mohuSearch {
+  position: absolute;
+  top: .32rem;
+  background: #fff;
+  box-shadow: 0 0 0.04rem #ccc;
+  width: 100%;
+  height: 5rem;
+  overflow: auto;
+  overflow-x: hidden;
+  z-index: 10;
+}
+.box .boxLeft .search .mohuSearch li {
+  width: 2.4rem;
+  height: .35rem;
+  padding: .08rem .1rem;
+  border-bottom: 0.005rem solid #ccc;
+}
+.box .boxLeft .search .mohuSearch li img {
+  width: .35rem;
+  height: .35rem;
+}
+.box .boxLeft .search .mohuSearch li span {
+  padding-left: .1rem;
+}
+.box .boxLeft .search input {
+  width: 1.8rem;
+  height: .3rem;
+  padding: 0 .4rem 0 .1rem;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+  outline: none;
+  border: .01rem solid transparent;
+  border-radius: .2rem .2rem;
+  -webkit-border-radius: .2rem .2rem;
+  -moz-border-radius: .2rem .2rem;
+  -ms-border-radius: .2rem .2rem;
+  background: #09707e;
+}
+.box .boxLeft .search input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: rgba(255, 255, 255, 0.4);
+  font-size: .12rem;
+}
+.box .boxLeft .search input::-webkit-input-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: rgba(255, 255, 255, 0.4);
+  font-size: .12rem;
+}
+.box .boxLeft .search input:-ms-input-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: rgba(255, 255, 255, 0.4);
+  font-size: .12rem;
+}
+.box .boxLeft .search input:focus {
+  border: .005rem solid #0a7a89;
+}
+.box .boxLeft .search svg {
+  position: absolute;
+  top: .065rem;
+  right: .2rem;
+  width: .15rem;
+  height: .15rem;
+  padding: .03rem;
+  border-radius: 50% 50%;
+}
+.box .boxLeft .search svg:hover {
+  color: #30ddf8;
+  background: #01a3ba;
+}
+.box .boxLeft .nav {
+  width: 100%;
+  height: .6rem;
+  list-style: none;
+  border-bottom: 0.01rem solid #0e8c9d;
+}
+.box .boxLeft .nav li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: .15rem 0;
+}
+.box .boxLeft .nav li svg {
+  width: .25rem;
+  height: .25rem;
+}
+.box .boxLeft .nav li svg:hover {
+  color: #30ddf8;
+}
+.box .boxLeft .nav li:first-child svg {
+  color: #30ddf8;
+}
+.box .boxLeft .content {
+  width: 2.6rem;
+  height: 5.35rem;
+  list-style: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-3dlight-color: red;
+  scrollbar-dark-shadow-color: red;
+}
+.box .boxLeft .content::-webkit-scrollbar {
+  width: .05rem;
+}
+.box .boxLeft .content::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 0.06rem rgba(0, 0, 0, 0.3);
+  border-radius: .1rem;
+  background-color: #F5F5F5;
+}
+.box .boxLeft .content::-webkit-scrollbar-thumb {
+  border-radius: .1rem;
+  -webkit-box-shadow: inset 0 0 0.06rem rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+.box .boxLeft .content li {
+  width: 2.3rem;
+  height: .48rem;
+  padding: .105rem .15rem;
+  border-bottom: 0.01rem solid #0e8c9d;
+}
+.box .boxLeft .content li:hover {
+  background: #108ea0;
+}
+.box .boxLeft .content li img {
+  width: .48rem;
+  height: .48rem;
+  border-radius: 50% 50%;
+  -webkit-border-radius: 50% 50%;
+  -moz-border-radius: 50% 50%;
+  float: left;
+}
+.box .boxLeft .content li span {
+  font-size: .15rem;
+  line-height: .48rem;
+  float: left;
+  margin-left: .16rem;
+  color: #fff;
+}
+.box .boxLeft .content li .cancel {
+  width: .25rem;
+  height: .25rem;
+  float: right;
+  display: none;
+  margin-top: .115rem;
+  border-radius: 50% 50%;
+}
+.box .boxLeft .content li .cancel:hover {
+  background: #0a7a89;
+  color: #30ddf8;
+}
+.box .boxLeft .content li i {
+  float: right;
+  display: block;
+  margin-top: .14rem;
+  width: .2rem;
+  height: .2rem;
+  line-height: .2rem;
+  text-align: center;
+  border-radius: 50% 50%;
+  color: #fff;
+  background: #f3555c;
+}
+.box .boxLeft .content li.yanzheng svg.icon {
+  float: left;
+  width: .4rem;
+  height: .4rem;
+  margin-top: .04rem;
+  color: #fff;
+}
+.box .boxLeft .content li.yanzheng span {
+  line-height: .48rem;
+}
+.box .boxLeft .content.chat li:not(.yanzheng) span {
+  line-height: .24rem;
+}
+.box .boxLeft .content.chat li:not(.yanzheng) span b {
+  font-weight: 300;
+}
+.box .boxLeft .content.chat li:not(.yanzheng) span em {
+  font-size: .14rem;
+  opacity: .8;
+}
+.box .boxLeft .content.chat,
+.box .boxLeft .content.qun,
+.box .boxLeft .content.add {
+  display: none;
+}
+.box .boxLeft footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: .2rem;
+  background: #0a7a89;
+}
+.box .boxRight {
+  width: 7.4rem;
+  float: left;
+  height: 100%;
+  background: #fff;
+}
+.box .boxRight .add1 header {
+  width: 100%;
+  height: .45rem;
+}
+.box .boxRight .add1 header p {
+  line-height: .45rem;
+  text-align: center;
+}
+.box .boxRight .add1 .friendTest {
+  width: 100%;
+  height: .4rem;
+  background: #01a3ba;
+}
+.box .boxRight .add1 .friendTest span {
+  margin-left: .2rem;
+  line-height: .4rem;
+  color: #fff;
+}
+.box .boxRight .add1 .friendTestContent {
+  width: 100%;
+  height: 6.75rem;
+}
+.box .boxRight .add1 .friendTestContent em {
+  float: right;
+  line-height: .5rem;
+  margin-right: .2rem;
+}
+.box .boxRight .add1 .friendTestContent em:hover {
+  cursor: pointer;
+  opacity: .6;
+}
+.box .boxRight .add1 .friendTestMsg {
+  width: 7.1rem;
+  height: 5.9rem;
+  padding: .2rem .15rem .15rem;
+  overflow: auto;
+}
+.box .boxRight .add1 .friendTestMsg::-webkit-scrollbar {
+  width: .05rem;
+}
+.box .boxRight .add1 .friendTestMsg::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 0.06rem rgba(0, 0, 0, 0.3);
+  border-radius: .1rem;
+  background-color: #F5F5F5;
+}
+.box .boxRight .add1 .friendTestMsg::-webkit-scrollbar-thumb {
+  border-radius: .1rem;
+  -webkit-box-shadow: inset 0 0 0.06rem rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+.box .boxRight .add1 .friendTestMsg li {
+  width: 100%;
+  height: 1.5rem;
+  margin-bottom: .2rem;
+}
+.box .boxRight .add1 .friendTestMsg li p {
+  font-size: .12rem;
+  line-height: .12rem;
+  margin-bottom: .1rem;
+  color: #ccc;
+  text-align: left;
+}
+.box .boxRight .add1 .friendTestMsg li div {
+  width: 100%;
+  height: 1.27rem;
+  background: #fafafa;
+}
+.box .boxRight .add1 .friendTestMsg li div img {
+  width: .9rem;
+  height: .9rem;
+  margin: .185rem .2rem 0;
+  border-radius: 50%;
+}
+.box .boxRight .add1 .friendTestMsg li div p {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: .25rem;
+}
+.box .boxRight .add1 .friendTestMsg li div p span {
+  font-size: .16rem;
+  line-height: .25rem;
+  color: #000;
+}
+.box .boxRight .add1 .friendTestMsg li div p span i {
+  color: #0a7a89;
+}
+.box .boxRight .add1 .friendTestMsg li div p span i:hover {
+  cursor: pointer;
+  opacity: .6;
+}
+.box .boxRight .add1 .friendTestMsg li div p span:nth-of-type(2) {
+  font-size: .14rem;
+}
+.box .boxRight .add1 .friendTestMsg li div p span:nth-of-type(3) {
+  font-size: .14rem;
+}
+.box .boxRight .add1 .friendTestMsg li div button {
+  float: right;
+  display: inline-block;
+  height: .3rem;
+  line-height: .3rem;
+  padding: 0 .24rem;
+  margin: .46rem .2rem 0 0;
+  color: #fff;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: .03rem;
+  border: none;
+  cursor: pointer;
+}
+.box .boxRight .add1 .friendTestMsg li div button:nth-of-type(1) {
+  background: #f3555c;
+}
+.box .boxRight .add1 .friendTestMsg li div button:nth-of-type(2) {
+  background: #01a3ba;
+}
+.box .boxRight .add1 .friendTestMsg li div button:hover {
+  opacity: .7;
+}
+.box .boxRight .addfriend header {
+  width: 100%;
+  height: .48rem;
+  text-align: center;
+  margin-top: .4rem;
+  background: #f5f5f5;
+}
+.box .boxRight .addfriend header span {
+  position: relative;
+  margin-left: .2rem;
+  line-height: .48rem;
+  color: #000;
+}
+.box .boxRight .addfriend header span:hover {
+  cursor: pointer;
+}
+.box .boxRight .addfriend header span i {
+  position: absolute;
+  bottom: -0.16rem;
+  left: .08rem;
+  border-width: .07rem;
+  border-color: transparent transparent #fff transparent;
+  border-style: dashed dashed  solid dashed;
+}
+.box .boxRight .addfriend input {
+  width: 3.95rem;
+  height: .2rem;
+  padding: .1rem;
+  margin: .7rem 1.625rem .3rem;
+  border: 0.005rem solid #ccc;
+  border-radius: .04rem;
+}
+.box .boxRight .addfriend input:focus {
+  border: 0.005rem solid #0a7a89;
+}
+.box .boxRight .addfriend button {
+  display: block;
+  width: .8rem;
+  height: .32rem;
+  text-align: center;
+  line-height: .32rem;
+  color: #fff;
+  border: none;
+  background: #01a3ba;
+  border-radius: .2rem;
+  margin: 0 auto;
+}
+.box .boxRight .addfriend button:hover {
+  cursor: pointer;
+  opacity: .7;
+}
+.box .boxRight .addfriend .searchContent {
+  width: 7.2rem;
+  height: 4rem;
+  margin: .4rem 0 0 .1rem;
+  text-align: left;
+  overflow: auto;
+}
+.box .boxRight .addfriend .searchContent li {
+  display: flex;
+  float: left;
+  width: 1.7rem;
+  height: .7rem;
+  padding: .1rem .15rem .1rem .49rem;
+}
+.box .boxRight .addfriend .searchContent li > div {
+  float: left;
+  display: inline-block;
+  width: 1.7rem;
+  height: .7rem;
+}
+.box .boxRight .addfriend .searchContent li > div > div {
+  float: left;
+  height: .7rem;
+  width: .5rem;
+}
+.box .boxRight .addfriend .searchContent img {
+  width: .5rem;
+  height: .5rem;
+  margin-top: .1rem;
+  border-radius: 50%;
+}
+.box .boxRight .addfriend .searchContent p {
+  float: left;
+  width: 1.1rem;
+  font-size: .14rem;
+  color: #000;
+  margin-left: .1rem;
+}
+.box .boxRight .addfriend .searchContent p span {
+  line-height: .2rem;
+  padding-left: .05rem;
+}
+.box .boxRight .addfriend .searchContent p span:hover {
+  cursor: pointer;
+  color: #ccc;
+}
+.box .boxRight .addfriend .searchContent button {
+  width: .6rem;
+  height: .25rem;
+  margin-left: 0;
+  font-size: .12rem;
+  line-height: .25rem;
+  background: #01a3ba;
+}
+.box .boxRight .addfriend .search-delete {
+  position: absolute;
+  font-size: .34rem;
+  color: #eee;
+  top: .72rem;
+  right: 1.75rem;
+}
+.box .boxRight .addfriend .search-delete:hover {
+  color: #9f9f9f;
+}
+.box .boxRight #addFriend header span {
+  font-size: .16rem;
+}
+.box .boxRight #addFriend header span:nth-of-type(1) {
+  color: #0a7a89;
+}
+.box .boxRight #addQun header span {
+  font-size: .16rem;
+}
+.box .boxRight #addQun header span:nth-of-type(2) {
+  color: #0a7a89;
+}
+.box input {
+  width: 1rem;
+}
+.box .active {
+  background: #20B2C9!important;
+}
+.box .boxRight {
+  width: 7.4rem;
+  float: left;
+  height: 100%;
+  background: #fff;
+  /********公共样式 添加好友 拉好友进群 拉好友聊天*******/
+  /******主体部分******/
+  /********个人聊天室******/
+  /********文件界面*******/
+  /*******聊天记录界面******/
+}
+.box .boxRight button {
+  font-size: .14rem;
+}
+.box .boxRight ul.addArea {
+  width: 100%;
+  padding: .10rem .15rem 0rem;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.box .boxRight ul.addArea li {
+  float: left;
+  width: .395rem;
+  margin-right: .35rem;
+  margin-bottom: .20rem;
+  cursor: pointer;
+}
+.box .boxRight ul.addArea li:nth-child(10) {
+  margin-right: 0;
+}
+.box .boxRight ul.addArea img {
+  width: .395rem;
+  height: .395rem;
+  border-radius: 50%;
+}
+.box .boxRight ul.addArea dd {
+  font-size: .12rem;
+}
+.box .boxRight ul.addArea li.addBtn {
+  width: 0.395rem;
+  height: 0.395rem;
+  text-align: center;
+  border: 0.01rem dotted #bebebe;
+  box-sizing: border-box;
+}
+.box .boxRight ul.addArea li.addBtn i {
+  font-size: .38rem;
+}
+.box .boxRight .top-content {
+  width: 100%;
+  height: .45rem;
+  text-align: center;
+  border-bottom: 0.01rem solid #eee;
+  box-sizing: border-box;
+}
+.box .boxRight .top-content span {
+  display: inline-block;
+  font-size: .16rem;
+  margin-top: .20rem;
+}
+.box .boxRight .main-content {
+  width: 100%;
+  height: 7.15rem;
+  /***我的信息****/
+}
+.box .boxRight .main-content .allBtn {
+  width: 2.0rem;
+  margin-top: .2rem;
+}
+.box .boxRight .main-content .allBtn button {
+  width: .9rem;
+  height: .3rem;
+  line-height: .3rem;
+  border-radius: .15rem;
+  border: 0.01rem solid #0e8c9d;
+  box-sizing: border-box;
+}
+.box .boxRight .main-content .allBtn button:nth-child(1) {
+  float: left;
+  color: #fff;
+  margin-right: .16rem;
+  background: #0e8c9d;
+}
+.box .boxRight .main-content .allBtn button:nth-child(2) {
+  float: left;
+  color: #000;
+  background: #fff;
+}
+.box .boxRight .main-content .prompt-message {
+  display: inline-block;
+  width: 100%;
+  font-size: .16rem;
+  margin-top: 45%;
+  text-align: center;
+}
+.box .boxRight .main-content .two-groupPerson {
+  width: 100%;
+  height: auto;
+}
+.box .boxRight .main-content .two-groupPerson ul.addArea {
+  position: relative;
+  max-height: 3rem;
+  box-shadow: 0 0.03rem 0.02rem #ccc;
+  width: 100%;
+  padding: .10rem 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.box .boxRight .main-content .two-groupPerson ul.addArea li {
+  float: left;
+  margin: .05rem .1725rem;
+  cursor: pointer;
+}
+.box .boxRight .main-content .two-groupPerson ul.addArea img {
+  width: .395rem;
+  height: .395rem;
+  border-radius: 50%;
+}
+.box .boxRight .main-content .two-groupPerson ul.addArea dd {
+  font-size: .12rem;
+}
+.box .boxRight .main-content .two-groupPerson ul.addArea li.addBtn {
+  width: 0.395rem;
+  height: 0.395rem;
+  text-align: center;
+  border: 0.01rem dotted #bebebe;
+  box-sizing: border-box;
+}
+.box .boxRight .main-content .two-groupPerson ul.addArea li.addBtn i {
+  font-size: .38rem;
+}
+.box .boxRight .main-content .two-groupPerson .showQunModalBox {
+  position: absolute;
+  bottom: .2rem;
+  right: .15rem;
+  width: .42rem;
+  height: .42rem;
+  text-align: center;
+  border: 0.01rem dotted #ccc;
+}
+.box .boxRight .main-content .two-groupPerson #showQunModalBtn {
+  font-size: .4rem;
+  z-index: 5;
+}
+.box .boxRight .main-content .two-groupPerson .group-detail {
+  width: 5rem;
+  height: 2rem;
+  margin-top: .2rem;
+  float: right;
+}
+.box .boxRight .main-content .two-groupPerson .group-detail li {
+  width: auto;
+  height: .3rem;
+  line-height: .3rem;
+  margin: 0 auto;
+  margin-bottom: .15rem;
+  cursor: pointer;
+  text-align: left;
+}
+.box .boxRight .main-content .two-groupPerson .group-detail li:nth-child(1) span:hover {
+  border: 0 solid #c6c6c6;
+  border-radius: .05rem;
+  background: #eee;
+}
+.box .boxRight .main-content .two-groupPerson .group-detail i {
+  display: inline-block;
+  width: .3rem;
+  height: .3rem;
+  text-align: left;
+  margin-left: .35rem;
+}
+.box .boxRight .main-content .two-groupPerson .group-detail span {
+  display: inline-block;
+  font-size: .16rem;
+  padding: 0 .15rem;
+}
+.box .boxRight .main-content .message {
+  width: 100%;
+  height: auto;
+}
+.box .boxRight .main-content .message dl {
+  width: 2.0rem;
+  margin: 0 auto;
+}
+.box .boxRight .main-content .message dd {
+  text-align: center;
+  margin-top: .2rem;
+  font-size: .15rem;
+}
+.box .boxRight .main-content .message dt {
+  text-align: center;
+  margin-top: .4rem;
+}
+.box .boxRight .main-content .message img {
+  width: .8rem;
+  height: .8rem;
+  border-radius: 50%;
+}
+.box .boxRight .main-content .message .allBtn {
+  margin: .4rem auto;
+}
+.box .boxRight .one-chatting {
+  width: 100%;
+  height: 100%;
+}
+.box .boxRight .one-chatting .chatting-top {
+  position: relative;
+  width: 100%;
+  height: .4rem;
+  line-height: .4rem;
+  text-align: center;
+  border-bottom: 0.01rem solid #eee;
+}
+.box .boxRight .one-chatting .chatting-top span {
+  display: inline-block;
+  font-size: .16rem;
+}
+.box .boxRight .one-chatting .chatting-top i {
+  font-size: .16rem;
+}
+.box .boxRight .one-chatting .chatting-top ul.addArea {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  max-height: 1.65rem;
+  border-bottom: 0.01rem solid #eee;
+  border-top: 0.01rem solid #eee;
+  background: #fff;
+  box-sizing: border-box;
+}
+.box .boxRight .one-chatting .chatting-top li {
+  width: .5rem;
+  margin: .1rem 0 0 .2rem;
+  padding: 0;
+}
+.box .boxRight .one-chatting .chatting-top li.addBtn {
+  margin-top: .2rem;
+}
+.box .boxRight .one-chatting .chatting-top dd {
+  height: .3rem;
+  line-height: .3rem;
+}
+.box .boxRight .one-chatting .chatting-middle {
+  width: 7.4rem;
+  height: 5.29rem;
+  padding: .25rem .3rem .1rem .25rem;
+  border-bottom: 0.01rem solid #eee;
+  box-sizing: border-box;
+  overflow: auto;
+}
+.box .boxRight .one-chatting .chatting-middle .person-talk {
+  width: 6.85rem;
+}
+.box .boxRight .one-chatting .chatting-middle .person-talk ul {
+  overflow: hidden;
+  margin-top: .1rem;
+}
+.box .boxRight .one-chatting .chatting-middle .person-talk ul#your_talk {
+  text-align: right;
+}
+.box .boxRight .one-chatting .chatting-middle .person-talk ul#my_talk {
+  text-align: left;
+}
+.box .boxRight .one-chatting .chatting-middle .person-talk li {
+  float: left;
+}
+.box .boxRight .one-chatting .chatting-middle .person-talk li:nth-child(1),
+.box .boxRight .one-chatting .chatting-middle .person-talk li:nth-child(3) {
+  width: .4rem;
+  height: .4rem;
+}
+.box .boxRight .one-chatting .chatting-middle .person-talk li:nth-child(1) img,
+.box .boxRight .one-chatting .chatting-middle .person-talk li:nth-child(3) img {
+  width: .4rem;
+  height: .4rem;
+  border-radius: 50%;
+}
+.box .boxRight .one-chatting .chatting-middle .person-talk li:nth-child(2) {
+  width: 5.65rem;
+  height: auto;
+  margin: 0 .2rem;
+  box-sizing: border-box;
+}
+.box .boxRight .one-chatting .chatting-middle .person-talk li:nth-child(2) div {
+  background-color: #E3F4F6;
+}
+.box .boxRight .one-chatting .chatting-middle .person-talk span:nth-child(2) {
+  display: inline-block;
+  margin-top: .05rem;
+  padding: .05rem .2rem;
+  text-align: justify;
+  border-radius: .05rem;
+  background: #E3F4F6;
+}
+.box .boxRight .one-chatting .chatting-middle .person-talk p.right-name {
+  text-align: right;
+}
+.box .boxRight .one-chatting .chatting-bottom {
+  width: 100%;
+  height: 1.96rem;
+}
+.box .boxRight .one-chatting .chatting-bottom ul {
+  overflow: hidden;
+}
+.box .boxRight .one-chatting .chatting-bottom li {
+  float: left;
+  width: .40rem;
+  line-height: .4rem;
+  text-align: center;
+}
+.box .boxRight .one-chatting .chatting-bottom li:nth-child(1) {
+  margin-left: .1rem;
+}
+.box .boxRight .one-chatting .chatting-bottom .chatting-icon {
+  width: .20rem;
+  height: .2rem;
+  color: #1fb0c2;
+  cursor: pointer;
+}
+.box .boxRight .one-chatting .chatting-bottom .chatting-icon:hover {
+  color: #30ddf8;
+}
+.box .boxRight .one-chatting .sendText {
+  width: 7rem;
+  height: .86rem;
+  max-width: 7rem;
+  max-height: .86rem;
+  padding: .05rem .2rem;
+  border: none;
+  outline: none;
+  overflow: auto;
+}
+.box .boxRight .one-chatting .send-btn {
+  width: 100%;
+}
+.box .boxRight .one-chatting .sendBtn {
+  float: right;
+  margin: .1rem .3rem 0 0;
+  padding: 0;
+  width: .72rem;
+  height: .3rem;
+  line-height: .3rem;
+  color: #fff;
+  text-align: center;
+  border-radius: .06rem;
+  background: #0a7a89;
+}
+.box .boxRight .file-view {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.box .boxRight .file-view .fileBottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: .3rem;
+  background: #fff;
+}
+.box .boxRight .file-view .file-nav {
+  position: relative;
+  width: 100%;
+  heigth: .4rem;
+  line-height: .4rem;
+  background: #00A3B9;
+  overflow: hidden;
+}
+.box .boxRight .file-view .file-nav span {
+  float: left;
+  color: #fff;
+  font-size: .16rem;
+  margin-left: .2rem;
+}
+.box .boxRight .file-view .file-nav form {
+  position: relative;
+  float: left;
+  margin: 0 .1rem 0 4.3rem;
+}
+.box .boxRight .file-view .file-nav i {
+  position: absolute;
+  top: .02rem;
+  left: .08rem;
+  color: #fff;
+}
+.box .boxRight .file-view .file-nav .file-input {
+  width: 1.5rem;
+  height: .26rem;
+  border: 0.01rem solid #00bfd9;
+  border-radius: .1rem;
+  box-sizing: border-box;
+  padding: 0rem .28rem;
+  color: #000;
+}
+.box .boxRight .file-view .file-nav .upBtn {
+  width: .77rem;
+  height: .30rem;
+  line-height: .30rem;
+  color: #fff;
+  font-size: .16rem;
+  border: 0;
+  border-radius: .05rem;
+  text-align: center;
+  background: #00bfd9;
+}
+.box .boxRight .file-view .file-content {
+  height: 6.45rem;
+  width: 100%;
+  margin: 0;
+  background: #fff;
+  overflow: auto;
+}
+.box .boxRight .file-view .file-content tr > td:first-child img {
+  width: .28rem;
+  height: .28rem;
+}
+.box .boxRight .file-view .file-content tr > td:last-child img {
+  width: .20rem;
+  height: .20rem;
+}
+.box .boxRight .file-view .file-content th,
+.box .boxRight .file-view .file-content td {
+  height: .48rem!important;
+  border: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.box .boxRight .file-view .file-content th,
+.box .boxRight .file-view .file-content td:not(:nth-child(1)) {
+  text-align: center;
+}
+.box .boxRight .file-view .file-content td:nth-child(1),
+.box .boxRight .file-view .file-content td:nth-child(4) {
+  cursor: pointer;
+}
+.box .boxRight .file-view .file-content tr > td:nth-child(2),
+.box .boxRight .file-view .file-content tr > td:nth-child(3) {
+  color: #999999;
+}
+.box .boxRight .file-view .file-content tr {
+  width: 100%;
+  background: #fff;
+  font-size: .14rem;
+}
+.box .boxRight .file-view .file-content .progressNav {
+  height: .40rem;
+  box-sizing: border-box;
+}
+.box .boxRight .file-view .file-content .progressNav li {
+  height: .20rem;
+  line-height: .20rem;
+}
+.box .boxRight .file-view .file-content .progressNav .download-speed {
+  width: .8rem;
+  margin-left: .8rem;
+}
+.box .boxRight .file-view .file-content .progressNav .progressBar {
+  display: inline-block;
+  width: .80rem;
+  height: .08rem;
+  border-radius: .04rem;
+  background: #108ea0;
+}
+.box .boxRight .chatting-record {
+  width: 100%;
+  height: 100%;
+}
+.box .boxRight .chatting-record .record-nav {
+  width: 100%;
+  heigth: .4rem;
+  line-height: .4rem;
+  color: #fff;
+  padding-left: .2rem;
+  background: #00A3B9;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.box .boxRight .chatting-record .record-middle {
+  width: 7.4rem;
+  height: 6.4rem;
+  padding: 0 .3rem 0 .25rem;
+  overflow: auto;
+  box-sizing: border-box;
+}
+.box .boxRight .chatting-record .record-middle .person-talk {
+  width: 6.85rem;
+}
+.box .boxRight .chatting-record .record-middle .person-talk ul {
+  overflow: hidden;
+  margin-top: .1rem;
+}
+.box .boxRight .chatting-record .record-middle .person-talk ul.your_talk {
+  text-align: right;
+}
+.box .boxRight .chatting-record .record-middle .person-talk ul.my_talk {
+  text-align: left;
+}
+.box .boxRight .chatting-record .record-middle .person-talk li {
+  float: left;
+}
+.box .boxRight .chatting-record .record-middle .person-talk li:nth-child(1),
+.box .boxRight .chatting-record .record-middle .person-talk li:nth-child(3) {
+  width: .4rem;
+  height: .4rem;
+}
+.box .boxRight .chatting-record .record-middle .person-talk li:nth-child(1) img,
+.box .boxRight .chatting-record .record-middle .person-talk li:nth-child(3) img {
+  width: .4rem;
+  height: .4rem;
+  border-radius: 50%;
+}
+.box .boxRight .chatting-record .record-middle .person-talk li:nth-child(2) {
+  width: 5.65rem;
+  height: auto;
+  margin: 0 .2rem;
+  box-sizing: border-box;
+}
+.box .boxRight .chatting-record .record-middle .person-talk li:nth-child(2) div {
+  background-color: #E3F4F6;
+}
+.box .boxRight .chatting-record .record-middle .person-talk span:nth-child(2) {
+  display: inline-block;
+  margin-top: .05rem;
+  padding: .05rem .2rem;
+  text-align: justify;
+  border-radius: .05rem;
+  background: #E3F4F6;
+}
+.box .boxRight .chatting-record .record-middle .person-talk p.right-name {
+  text-align: right;
+}
+.box .boxRight .chatting-record .page-turner {
+  width: 100%;
+  height: .66rem;
+}
+.box .boxRight .chatting-record .page-turner ul {
+  overflow: hidden;
+}
+.box .boxRight .chatting-record .page-turner li {
+  float: right;
+  cursor: pointer;
+}
+.box .boxRight .chatting-record .page-turner li:nth-child(1) {
+  margin-right: .1rem;
+}
+.box .modal {
+  position: relative;
+  width: 100%;
+  height: 7.6rem;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 .03rem #eee;
+}
+.box .modal-dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -2.66rem;
+  margin-left: -2.2rem;
+  width: 4.4rem;
+  height: 5.32rem;
+  border-radius: .05rem;
+  background: #fff;
+}
+.box .modal-title {
+  width: 4.4rem;
+  height: .7rem;
+  border-radius: .05rem;
+  background: #F5F5F5;
+}
+.box .modal-title p:nth-child(1) {
+  position: relative;
+  width: 100%;
+  height: .3rem;
+  line-height: .3rem;
+  text-align: right;
+}
+.box .modal-title p:nth-child(1) i {
+  padding-right: .05rem;
+  color: #ccc;
+  font-size: .20rem;
+}
+.box .modal-title p:nth-child(1) i:hover {
+  color: #ddd;
+}
+.box .modal-title p:nth-child(2) {
+  width: 100%;
+  height: .4rem;
+  font-size: .16rem;
+  text-align: center;
+}
+.box .modal-main {
+  width: 4.4rem;
+  height: 3.82rem;
+  border-bottom: 0.01rem solid #eee;
+  box-sizing: border-box;
+}
+.box .modal-main form {
+  position: relative;
+  width: 100%;
+  height: .6rem;
+  line-height: .6rem;
+}
+.box .modal-main input#group_search {
+  width: 2.3rem;
+  height: .3rem;
+  padding-left: .4rem;
+  margin-left: .2rem;
+  border: 0.01rem solid #eee;
+  border-radius: .15rem;
+  background: #F5F5F5;
+}
+.box .modal-main input#group_search1 {
+  width: 2.3rem;
+  height: .3rem;
+  padding-left: .4rem;
+  margin-left: .2rem;
+  border: 0.01rem solid #eee;
+  border-radius: .15rem;
+  background: #F5F5F5;
+}
+.box .modal-main i {
+  position: absolute;
+  top: 50%;
+  left: .3rem;
+  margin-top: -0.3rem;
+  font-size: .2rem;
+}
+.box .modal-main ul.modal-list {
+  width: 4rem;
+  height: 3.22rem;
+  margin-left: .4rem;
+  overflow: auto;
+}
+.box .modal-main ul.modal-list li {
+  position: relative;
+  width: 100%;
+  height: .4rem;
+  line-height: .4rem;
+  margin-bottom: .25rem;
+}
+.box .modal-main ul.modal-list li b {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -0.1rem;
+  width: .2rem;
+  height: .2rem;
+  border: 0.01rem solid #eee;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.box .modal-main ul.modal-list li img {
+  width: .4rem;
+  height: .4rem;
+  border-radius: 50%;
+  margin-left: .3rem;
+  margin-right: .2rem;
+}
+.box .modal-main ul.modal-list li span {
+  font-size: .14rem;
+}
+.box .modal-bottom {
+  width: 4.4rem;
+  height: .8rem;
+  line-height: .8rem;
+  text-align: center;
+}
+.box .modalBtn {
+  width: 1.5rem;
+  height: .38rem;
+  color: #E3E3E3;
+  font-size: .16rem;
+  border: 0;
+  border-radius: .1rem;
+  background: #B6B6B6;
+}
+.layui-layer-dialog.addBox .layui-layer-content {
+  text-align: center;
+  line-height: 1rem;
+}
+.layui-layer-title {
+  padding: 0 0 0 .2rem!important;
+  height: .3rem!important;
+  line-height: .3rem!important;
+  border-bottom: .01rem solid #eee;
+  font-size: .14rem;
+  color: #fff !important;
+  overflow: hidden;
+  background-color: #00A2BB !important;
+  border-radius: .02rem .02rem 0 0;
+}
+.layui-layer-setwin {
+  position: absolute;
+  right: .08rem!important;
+  top: .08rem!important;
+  font-size: 0;
+  line-height: initial;
+}
+.layui-layer-btn {
+  padding: 0 .1rem .12rem;
+}
+.layui-layer-btn a {
+  height: .23rem;
+  line-height: .23rem;
+  margin: 0 .06rem;
+  padding: 0 .26rem!important;
+  border: none!important;
+  color: #fff !important;
+  border-radius: .2rem!important;
+  font-size: .12rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+.layui-layer-btn a:nth-of-type(1) {
+  background: #00A2BB;
+}
+.layui-layer-btn a:nth-of-type(2) {
+  background: #f3555c;
+}
+.layui-layer-btn1 {
+  color: #333!important;
+}
+.layui-icon {
+  font-size: .28rem;
+  color: #00A2BB !important;
+  vertical-align: middle;
+}

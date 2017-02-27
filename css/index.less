@@ -1,0 +1,1514 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+i,em{
+  font-style: normal;
+}
+ul{
+  list-style: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+label,
+i,
+select,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.scrollbar-style::-webkit-scrollbar{
+  width: .05rem;
+}
+.scrollbar-style::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 .06rem rgba(0,0,0,0.3);
+  border-radius: .1rem;
+  background-color: #F5F5F5;
+}
+.scrollbar-style::-webkit-scrollbar-thumb{
+  border-radius: .1rem;
+  -webkit-box-shadow: inset 0 0 .06rem rgba(0,0,0,.3);
+  background-color: #555;
+}
+
+
+.focus{
+  border: .005rem solid #0a7a89;
+}
+//.close{
+//  display: none;
+//}
+@boxLeft-bg:#0a7a89;
+@withe:#fff;
+@input-bg:#09707e;
+@icon:#1fb0c2;
+@li-bottom:#0e8c9d;
+@li-hover:#108ea0;
+@nav-svgHover:#30ddf8;
+@msg:rgb(243,85,92);
+@black:#000;
+@sanjiao:#c9c9c9;
+@friendTest:rgb(1,163,186);
+@friendText:#ccc;
+@friendTestdiv:#fafafa;
+@addfriendTopbg:rgb(245,245,245);
+@ccc:#ccc;
+@addFriendBtn:rgb(1,114,132);
+@li-bottom:#0e8c9d;
+@li-hover:#108ea0;
+@borderColor:#eee;
+@upBtnColor:#00bfd9;
+html{
+  width: 100%;
+  height:100%;
+}
+body{
+  position: relative;
+  background-image: url("../img/bg.jpg");
+  background-size: 100% 100%;
+  width: 19.2rem;
+  height: 100%;
+  font-family: "微软雅黑";
+  //-webkit-text-size-adjust:none;
+  font-size: .12rem;
+}
+.hide{
+  display: none;
+}
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+  color: @icon;
+}
+.msg{
+  display: none;
+  position: absolute;
+  left:-50%;
+  top: 50%;
+  width: 1.2rem;
+  height: auto;
+  background: @boxLeft-bg;
+  border-radius: .05rem;
+  box-shadow: 0 0 .05rem @boxLeft-bg;
+  p{
+    color: @withe;
+    font-size: .14rem;
+    line-height: .33rem;
+    text-align: center;
+  }
+}
+.ipnutT{
+  border-radius: .04rem;
+  border:none;
+  border:.005rem solid @ccc;
+  padding:.04rem .1rem;
+}
+.qqFace{
+  background: @withe;
+  box-shadow: 0 0 .01rem @ccc;
+  top: 4.4rem!important;
+  left: 2.80rem!important;
+  td{
+    border-right: .01rem solid @borderColor;
+    border-bottom: .01rem solid @borderColor;
+    cursor: pointer;
+  }
+}
+.box{
+  position: absolute;
+  width: 10rem;
+  height: 7.6rem;
+  left:50%;
+  top:50%;
+  margin-left: -5rem;
+  margin-top: -3.8rem;
+  .boxLeft{
+    width: 2.6rem;
+    height: 100%;
+    float: left;
+    position: relative;
+    background: @boxLeft-bg;
+    header{
+      position: relative;
+      width: 2.3rem;
+      height: .48rem;
+      padding: .25rem .15rem;
+      img{
+        width: .48rem;
+        height: .48rem;
+        border-radius: 50% 50%;
+        -webkit-border-radius: 50% 50%;
+        -moz-border-radius: 50% 50%;
+        float: left;
+      }
+      span{
+        font-size: .16rem;
+        line-height: .48rem;
+        float: left;
+        margin-left: .16rem;
+        color:@withe;
+      }
+      svg{
+        width: .2rem;
+        height: .2rem;
+        float: right;
+        margin-top: .14rem;
+      }
+      .settingNav{
+        position: absolute;
+        top: .6rem;
+        right: .1rem;
+        width: 1.1rem;
+        height: 1.2rem;
+        background: @withe;
+        z-index: 2;
+        border-radius: .05rem;
+        box-shadow: 0 0 .05rem @black;
+        li{
+          width: 100%;
+          height: 25%;
+          svg{
+            width: .15rem;
+            height: .15rem;
+            margin: .075rem .08rem;
+            float: left;
+            color: @black;
+          }
+          span{
+            font-size: .12rem;
+            line-height: .3rem;
+            margin: 0;
+            color: @black;
+            &.exit{
+              padding-right: .23rem;
+            }
+            span{
+              margin: .1rem 0;
+              float: right;
+              border-width: .05rem;
+              border-color: transparent transparent transparent @sanjiao;
+              border-style:dashed dashed dashed solid;
+            }
+          }
+          &:hover{
+            background: @nav-svgHover;
+            svg,span{
+              color: @withe;
+              cursor: default;
+              span{
+                border-color: transparent transparent transparent @withe;
+              }
+            }
+          }
+          .settingNav2{
+            width: 80%;
+            height: 2rem;
+            background: @withe;
+            display: none;
+            position: absolute;
+            left: 105%;
+            border-radius: .05rem;
+            box-shadow: 0 0 .05rem @black;
+            li{
+              height:.25rem;
+              text-align: center;
+              font-size: .12rem;
+              line-height: .25rem;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .headerMsg{
+        display: none;
+        position: absolute;
+        left:-50%;
+        top: 50%;
+        width: 1.2rem;
+        height: auto;
+        background: @boxLeft-bg;
+        border-radius: .05rem;
+        box-shadow: 0 0 .05rem @boxLeft-bg;
+        p{
+          font-size: .14rem;
+          color: @withe;
+          line-height: .33rem;
+          text-align: center;
+        }
+      }
+    }
+    .search{
+      width: 2.6rem;
+      height: .32rem;
+      position: relative;
+      .mohuSearch{
+        position: absolute;
+        top:.32rem;
+        background: @withe;
+        box-shadow: 0 0 .04rem @ccc;
+        width: 100%;
+        height: 5rem;
+        overflow: auto;
+        overflow-x: hidden;
+        z-index: 10;
+        li{
+          width: 2.4rem;
+          height: .35rem;
+          padding: .08rem .1rem;
+          border-bottom: .005rem solid @ccc;
+          img{
+            width: .35rem;
+            height: .35rem;
+          }
+          span{
+            padding-left: .1rem;
+          }
+        }
+      }
+      input{
+        width: 1.8rem;
+        height: .3rem;
+        padding: 0 .4rem 0 .1rem;
+        color: @withe;
+        display: block;
+        margin: 0 auto;
+        outline: none;
+        border: .01rem solid transparent;
+        border-radius: .2rem .2rem;
+        -webkit-border-radius: .2rem .2rem;
+        -moz-border-radius: .2rem .2rem;
+        -ms-border-radius: .2rem .2rem;
+        background: @input-bg;
+        &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+          color: rgba(255,255,255,.4);
+          font-size: .12rem;
+        }
+        &::-webkit-input-placeholder { /* Mozilla Firefox 4 to 18 */
+          color: rgba(255,255,255,.4);
+          font-size: .12rem;
+        }
+        &:-ms-input-placeholder { /* Mozilla Firefox 4 to 18 */
+          color: rgba(255,255,255,.4);
+          font-size: .12rem;
+        }
+        &:focus{
+          border: .005rem solid #0a7a89;
+        }
+      }
+      svg{
+        position: absolute;
+        top: .065rem;
+        right: .2rem;
+        width: .15rem;
+        height: .15rem;
+        padding: .03rem;
+        border-radius: 50% 50%;
+        &:hover{
+          color: @nav-svgHover;
+          background: @friendTest;
+        }
+      }
+    }
+    .nav{
+      width: 100%;
+      height: .6rem;
+      list-style:none;
+      border-bottom: .01rem solid @li-bottom;
+      li{
+        float: left;
+        width: 25%;
+        text-align: center;
+        padding: .15rem 0;
+        svg{
+          width: .25rem;
+          height: .25rem;
+          &:hover{
+            color: @nav-svgHover;
+          }
+        }
+        &:first-child svg{
+          color: @nav-svgHover;
+        }
+      }
+    }
+    .content{
+      width: 2.6rem;
+      height:5.35rem;
+      list-style: none;
+      overflow-y: auto;
+      overflow-x: hidden;
+      scrollbar-3dlight-color:red;
+      scrollbar-dark-shadow-color:red;
+      &::-webkit-scrollbar{
+        width: .05rem;
+      }
+      &::-webkit-scrollbar-track
+      {
+        -webkit-box-shadow: inset 0 0 .06rem rgba(0,0,0,0.3);
+        border-radius: .1rem;
+        background-color: #F5F5F5;
+      }
+      &::-webkit-scrollbar-thumb
+      {
+        border-radius: .1rem;
+        -webkit-box-shadow: inset 0 0 .06rem rgba(0,0,0,.3);
+        background-color: #555;
+      }
+      li{
+        width: 2.3rem;
+        height: .48rem;
+        padding: .105rem .15rem;
+        border-bottom: .01rem solid @li-bottom;
+        &:hover{
+          background: @li-hover;
+        }
+        img{
+          width: .48rem;
+          height: .48rem;
+          border-radius: 50% 50%;
+          -webkit-border-radius: 50% 50%;
+          -moz-border-radius: 50% 50%;
+          float: left;
+        }
+        span{
+          font-size: .15rem;
+          line-height: .48rem;
+          float: left;
+          margin-left: .16rem;
+          color:@withe;
+        }
+        .cancel{
+          width: .25rem;
+          height: .25rem;
+          float: right;
+          display: none;
+          margin-top: .115rem;
+          border-radius: 50% 50%;
+            &:hover{
+              background: @boxLeft-bg;
+              color: @nav-svgHover;
+            }
+        }
+        i{
+          float: right;
+          display: block;
+          margin-top: .14rem;
+          width: .2rem;
+          height: .2rem;
+          line-height: .2rem;
+          text-align: center;
+          border-radius: 50% 50%;
+          color: @withe;
+          background: @msg;
+        }
+      }
+      & li.yanzheng svg.icon{
+        float: left;
+        width: .4rem;
+        height: .4rem;
+        margin-top: .04rem;
+        color: @withe;
+      }
+      & li.yanzheng span{
+        line-height: .48rem;
+      }
+      &.chat li:not(.yanzheng) span{
+        line-height: .24rem;
+        b{
+          font-weight: 300;
+        }
+        em{
+          font-size: .14rem;
+          opacity:.8;
+        }
+      }
+      &.chat,&.qun,&.add{
+        display: none;
+      }
+    }
+    footer{
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: .2rem;
+      background: @boxLeft-bg;
+    }
+  }
+  .boxRight{
+    width: 7.4rem;
+    float: left;
+    height: 100%;
+    background: @withe;
+    .add1{
+      header{
+        width: 100%;
+        height: .45rem;
+        p{
+          line-height: .45rem;
+          text-align: center;
+        }
+      }
+      .friendTest{
+        width: 100%;
+        height: .4rem;
+        background: @friendTest;
+        span{
+          margin-left: .2rem;
+          line-height: .4rem;
+          color: @withe;
+        }
+      }
+      .friendTestContent{
+        width: 100%;
+        height: 6.75rem;
+        em{
+          float: right;
+          line-height: .5rem;
+          margin-right: .2rem;
+          &:hover{
+            cursor: pointer;
+            opacity: .6;
+          }
+        }
+      }
+      .friendTestMsg{
+        width: 7.1rem;
+        height: 5.9rem;
+        padding:.2rem .15rem .15rem;
+        overflow: auto;
+        &::-webkit-scrollbar{
+          width: .05rem;
+        }
+        &::-webkit-scrollbar-track
+        {
+          -webkit-box-shadow: inset 0 0 .06rem rgba(0,0,0,0.3);
+          border-radius: .1rem;
+          background-color: #F5F5F5;
+        }
+        &::-webkit-scrollbar-thumb
+        {
+          border-radius: .1rem;
+          -webkit-box-shadow: inset 0 0 .06rem rgba(0,0,0,.3);
+          background-color: #555;
+        }
+      }
+      .friendTestMsg li{
+        width: 100%;
+        height: 1.5rem;
+        margin-bottom: .2rem;
+        p{
+          font-size: .12rem;
+          line-height: .12rem;
+          margin-bottom: .1rem;
+          color: @friendText;
+          text-align: left;
+        }
+        div{
+          width: 100%;
+          height: 1.27rem;
+          background: @friendTestdiv;
+          img{
+            width: .9rem;
+            height:.9rem;
+            margin: .185rem .2rem 0;
+            border-radius: 50%;
+          }
+          p{
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: .25rem;
+            span{
+              font-size: .16rem;
+              line-height: .25rem;
+              color: @black;
+              i{
+                color: @boxLeft-bg;
+                &:hover{
+                  cursor: pointer;
+                  opacity: .6;
+                }
+              }
+              &:nth-of-type(2){
+                font-size: .14rem;
+              }
+              &:nth-of-type(3){
+                font-size: .14rem;
+              }
+            }
+          }
+          button{
+            float: right;
+            display: inline-block;
+            height: .3rem;
+            line-height: .3rem;
+            padding: 0 .24rem;
+            margin: .46rem .2rem 0 0;
+            color: @withe;
+            white-space: nowrap;
+            text-align: center;
+            border-radius: .03rem;
+            border:none;
+            cursor: pointer;
+            &:nth-of-type(1){
+              background: @msg;
+            }
+            &:nth-of-type(2){
+              background: @friendTest;
+            }
+            &:hover{
+              opacity: .7;
+            }
+          }
+        }
+      }
+    }
+    .addfriend{
+      header{
+        width: 100%;
+        height: .48rem;
+        text-align: center;
+        margin-top: .4rem;
+        background: @addfriendTopbg;
+        span{
+          position: relative;
+          margin-left: .2rem;
+          line-height: .48rem;
+          color: @black;
+          &:hover{
+            cursor: pointer;
+          }
+          i{
+            position: absolute;
+            bottom: -.16rem;
+            left: .08rem;
+            border-width: .07rem;
+            border-color: transparent transparent @withe  transparent;
+            border-style: dashed dashed  solid dashed;
+          }
+        }
+      }
+      input{
+        width: 3.95rem;
+        height: .2rem;
+        padding:.1rem;
+        margin: .7rem 1.625rem .3rem;
+        border: .005rem solid @ccc;
+        border-radius: .04rem;
+        &:focus{
+          border: .005rem solid @boxLeft-bg;
+        }
+      }
+      button{
+        display: block;
+        width: .8rem;
+        height:.32rem;
+        text-align: center;
+        line-height: .32rem;
+        color: @withe;
+        border:none;
+        background: @friendTest;
+        border-radius: .2rem;
+        margin:  0 auto;
+        &:hover{
+          cursor: pointer;
+          opacity: .7;
+        }
+      }
+      .searchContent{
+        width: 7.2rem;
+        height: 4rem;
+        margin: .4rem 0 0 .1rem;
+        text-align: left;
+        overflow: auto;
+        li{
+          display: flex;
+          float: left;
+          width: 1.7rem;
+          height:.7rem;
+          padding: .1rem .15rem .1rem .49rem;
+          &>div{
+            float: left;
+            display: inline-block;
+            width: 1.7rem;
+            height:.7rem;
+            &>div{
+              float: left;
+              height: .7rem;
+              width: .5rem;
+            }
+          }
+        }
+        img{
+          //float: left;
+          width: .5rem;
+          height: .5rem;
+          margin-top: .1rem;
+          border-radius: 50%;
+        }
+        p{
+          //display: inline-block;
+          //vertical-align: middle
+          float: left;
+          width: 1.1rem;
+          font-size: .14rem;
+          color: @black;
+          margin-left: .1rem;
+          span{
+            line-height: .2rem;
+            padding-left: .05rem;
+            &:hover{
+              cursor: pointer;
+              color: @ccc;
+            }
+          }
+        }
+        button{
+          //float: left;
+          //display: inline-block;
+          width: .6rem;
+          height: .25rem;
+          margin-left: 0;
+          font-size: .12rem;
+          line-height: .25rem;
+          background: @friendTest;
+        }
+      }
+      .search-delete{
+        position: absolute;
+        font-size: .34rem;
+        color: @borderColor;
+        top: .72rem;
+        right: 1.75rem;
+        &:hover{
+          color: @borderColor/1.5;
+        }
+      }
+
+    }
+    #addFriend header span{
+      font-size: .16rem;
+      &:nth-of-type(1){
+        color: @boxLeft-bg;
+      }
+    }
+    #addQun header span{
+      font-size: .16rem;
+      &:nth-of-type(2){
+        color: @boxLeft-bg;
+      }
+    }
+  }
+  input{
+    width: 1rem;
+  }
+  .active{
+    background: #20B2C9!important;
+  }
+  .boxRight{
+    @borderColor:     #eee;
+    @white:           #fff;
+    @black:           #000;
+    width: 7.4rem;
+    float: left;
+    height: 100%;
+    background: @withe;
+    button{
+      font-size: .14rem;
+    }
+    /********公共样式 添加好友 拉好友进群 拉好友聊天*******/
+    ul.addArea{
+      width: 100%;
+      padding: .10rem .15rem 0rem;
+      overflow: hidden;
+      box-sizing: border-box;
+      li{
+        float: left;
+        width: .395rem;
+        // height: .50rem;
+        margin-right: .35rem;
+        margin-bottom: .20rem;
+        cursor: pointer;
+      }
+      li:nth-child(10){
+        margin-right: 0;
+      }
+      img{
+        width: .395rem;
+        height: .395rem;
+        border-radius: 50%;
+      }
+      dd{
+        font-size: .12rem;
+      }
+      // 添加按钮
+      li.addBtn{
+        width: 0.395rem;
+        height: 0.395rem;
+        text-align: center;
+        border: .01rem dotted @borderColor*.8;
+        box-sizing: border-box;
+        i{
+          font-size: .38rem;
+        }
+      }
+    }
+    .top-content{
+      width: 100%;
+      height: .45rem;
+      text-align: center;
+      border-bottom: .01rem solid @borderColor;
+      box-sizing: border-box;
+      span{
+        display: inline-block;
+        font-size: .16rem;
+        margin-top: .20rem;
+      }
+    }
+    /******主体部分******/
+    .main-content{
+      width: 100%;
+      height: 7.15rem;
+      .allBtn{
+        width: 2.0rem;
+        margin-top: .2rem;
+        button{
+          width: .9rem;
+          height: .3rem;
+          line-height: .3rem;
+          border-radius: .15rem;
+          border: .01rem solid @li-bottom;
+          box-sizing: border-box;
+          // &:hover{
+          //   color: @black;
+          //   background: @white;
+          // }
+        }
+        button:nth-child(1){
+          float: left;
+          color: @white;
+          margin-right: .16rem;
+          background: @li-bottom;
+        }
+        button:nth-child(2){
+          float: left;
+          color: @black;
+          background: @white;
+        }
+      }
+      .prompt-message{
+        // 居中显示
+        display: inline-block;
+        width: 100%;
+        font-size: .16rem;
+        margin-top: 45%;
+        text-align: center;
+      }
+      // 聊天群主添加人
+      .two-groupPerson{
+        width: 100%;
+        height: auto;
+        ul.addArea{
+          position: relative;
+          width: 100%;
+          max-height: 3rem;
+          box-shadow:  0 .03rem .02rem @ccc;
+          width: 100%;
+          padding: .10rem 0;
+          overflow: hidden;
+          box-sizing: border-box;
+          li{
+            float: left;
+            // height: .50rem;
+            margin: .05rem .1725rem;
+            cursor: pointer;
+          }
+          img{
+            width: .395rem;
+            height: .395rem;
+            border-radius: 50%;
+          }
+          dd{
+            font-size: .12rem;
+          }
+          // 添加按钮
+          li.addBtn{
+            width: 0.395rem;
+            height: 0.395rem;
+            text-align: center;
+            border: .01rem dotted @borderColor*.8;
+            box-sizing: border-box;
+            i{
+              font-size: .38rem;
+            }
+          }
+        }
+        .showQunModalBox{
+          position: absolute;
+          bottom:.2rem;
+          right: .15rem;
+          width: .42rem;
+          height: .42rem;
+          text-align: center;
+          border: .01rem dotted @ccc;
+        }
+        #showQunModalBtn{
+          font-size: .4rem;
+          z-index: 5;
+        }
+        // ul.addArea{
+        //   width: auto;
+        //   height: auto;
+        //   padding: .10rem .15rem 0rem;
+        //   overflow: hidden;
+        //   li{
+        //     float: left;
+        //     width: .395rem;
+        //     // height: .50rem;
+        //     margin-right: .35rem;
+        //     margin-bottom: .20rem;
+        //     cursor: pointer;
+        //   }
+        //   li:nth-child(10){
+        //     margin-right: 0;
+        //   }
+        //   img{
+        //     width: .395rem;
+        //     height: .395rem;
+        //     border-radius: 50%;
+        //   }
+        //   dd{
+        //     font-size: .12rem;
+        //   }
+        //   // 添加按钮
+        //   li.addBtn{
+        //     width: 0.395rem;
+        //     height: 0.395rem;
+        //     text-align: center;
+        //     border: .01rem dotted @borderColor*.8;
+        //     box-sizing: border-box;
+        //     i{
+        //       font-size: .38rem;
+        //     }
+        //   }
+        // }
+        // group-detail
+        .group-detail{
+          width: 5rem;
+          height: 2rem;
+          margin-top: .2rem;
+          float: right;
+          li{
+            width: auto;
+            height: .3rem;
+            line-height: .3rem;
+            margin: 0 auto;
+            margin-bottom: .15rem;
+            cursor: pointer;
+            text-align: left;
+            &:nth-child(1) span:hover{
+              border: 0 solid @borderColor/1.2;
+              border-radius: .05rem;
+              background: @borderColor;
+            }
+          }
+          i{
+            display: inline-block;
+            width: .3rem;
+            height: .3rem;
+            text-align: left;
+            margin-left: .35rem;
+          }
+          span{
+            display: inline-block;
+            font-size: .16rem;
+            padding: 0 .15rem;
+
+          }
+        }
+      }
+
+      /***我的信息****/
+      .message{
+        width: 100%;
+        height: auto;
+
+        dl{
+          width: 2.0rem;
+          margin: 0 auto;
+        }
+        dd{
+          text-align: center;
+          margin-top: .2rem;
+          font-size: .15rem;
+        }
+        dt{
+          text-align: center;
+          margin-top: .4rem;
+        }
+        img{
+          width: .8rem;
+          height: .8rem;
+          border-radius: 50%;
+        }
+        .allBtn{
+          margin: .4rem auto;
+        }
+      }
+    }
+    /********个人聊天室******/
+    .one-chatting{
+      width: 100%;
+      height: 100%;
+      .chatting-top{
+        position: relative;
+        width: 100%;
+        height: .4rem;
+        line-height: .4rem;
+        text-align: center;
+        border-bottom: .01rem solid @borderColor;
+        span{
+          display: inline-block;
+          font-size: .16rem;
+        }
+        i{
+          font-size: .16rem;
+        }
+        ul.addArea{
+          position: absolute;
+          margin: 0;
+          padding: 0;
+          overflow: auto;
+          max-height: 1.65rem;
+          border-bottom: .01rem solid @borderColor;
+          border-top: .01rem solid @borderColor;
+          background: @white;
+          box-sizing: border-box;
+        }
+        li{
+          width: .5rem;
+          margin: .1rem 0 0 .2rem;
+          padding: 0;
+        }
+        li.addBtn{
+          margin-top: .2rem;
+        }
+        dd{
+          height: .3rem;
+          line-height: .3rem;
+        }
+      }
+      .chatting-middle{
+        width: 7.4rem;
+        height: 5.29rem;
+        padding: .25rem .3rem .1rem .25rem;
+        border-bottom: .01rem solid @borderColor;
+        box-sizing: border-box;
+        overflow: auto;
+        .person-talk{
+          width: 6.85rem;
+          ul{
+            overflow: hidden;
+            margin-top: .1rem;
+          }
+          ul#your_talk{
+            text-align: right;
+          }
+          ul#my_talk{
+            text-align: left;
+          }
+          li{
+            float: left;
+          }
+          li:nth-child(1),
+          li:nth-child(3){
+            width: .4rem;
+            height: .4rem;
+            img{
+              width: .4rem;
+              height: .4rem;
+              border-radius: 50%;
+            }
+          }
+          li:nth-child(2){
+            width: 5.65rem;
+            height: auto;
+            margin: 0 .2rem;
+            box-sizing: border-box;
+          }
+          li:nth-child(2) div{
+            background-color: #E3F4F6;
+          }
+          span:nth-child(2){
+            display: inline-block;
+            margin-top: .05rem;
+            padding: .05rem .2rem;
+            text-align:justify;
+            border-radius: .05rem;
+            background: #E3F4F6;
+          }
+          p.right-name{
+            text-align: right;
+          }
+        }
+      }
+      .chatting-bottom{
+        width: 100%;
+        height: 1.96rem;
+        ul{
+          overflow: hidden;
+        }
+        li{
+          float: left;
+          width: .40rem;
+          line-height: .4rem;
+          text-align: center;
+        }
+        li:nth-child(1){
+          margin-left: .1rem;
+        }
+        .chatting-icon{
+          width: .20rem;
+          height: .2rem;
+          color: @icon;
+          cursor: pointer;
+          &:hover{
+            color: #30ddf8;
+          }
+        }
+      }
+      .sendText{
+        width: 7rem;
+        height: .86rem;
+        max-width: 7rem;
+        max-height: .86rem;
+        padding: .05rem .2rem;
+        border: none;
+        outline: none;
+        overflow: auto;
+      }
+      .send-btn{
+        width: 100%;
+      }
+      .sendBtn{
+        float: right;
+        margin:.1rem .3rem 0 0;
+        padding: 0;
+        width: .72rem;
+        height: .3rem;
+        line-height: .3rem;
+        color: @white;
+        text-align: center;
+        border-radius: .06rem;
+        background: @boxLeft-bg;
+      }
+    }
+
+    /********文件界面*******/
+    .file-view{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      .fileBottom{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: .3rem;
+        background: @withe;
+      }
+      .file-nav{
+        position: relative;
+        width: 100%;
+        heigth: .4rem;
+        line-height: .4rem;
+        background: #00A3B9;
+        overflow: hidden;
+        span{
+          float: left;
+          color: @white;
+          font-size: .16rem;
+          margin-left: .2rem;
+        }
+        form{
+          position: relative;
+          float: left;
+          margin: 0 .1rem 0 4.3rem;
+        }
+        i{
+          position: absolute;
+          top: .02rem;
+          left: .08rem;
+          color: @white;
+        }
+        .file-input{
+          width: 1.5rem;
+          height: .26rem;
+          border: .01rem solid @upBtnColor;
+          border-radius: .1rem;
+          box-sizing: border-box;
+          padding: 0rem .28rem;
+          color: @black;
+        }
+        .upBtn{
+          width: .77rem;
+          height: .30rem;
+          line-height: .30rem;
+          color: @white;
+          font-size: .16rem;
+          border: 0;
+          border-radius: .05rem;
+          text-align: center;
+          background: @upBtnColor;
+        }
+      }
+      .file-content{
+        height:6.45rem;
+        width: 100%;
+        margin: 0;
+        background: @white;
+        overflow: auto;
+        tr>td:first-child img{
+          width: .28rem;
+          height: .28rem;
+        }
+        tr>td:last-child img{
+          width: .20rem;
+          height: .20rem;
+        }
+        th,td{
+          height: .48rem!important;
+          border: 0;
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+        th,td:not(:nth-child(1)){
+          text-align: center;
+        }
+        td:nth-child(1),
+        td:nth-child(4){
+          cursor: pointer;
+        }
+        tr>td:nth-child(2),
+        tr>td:nth-child(3){
+          color: #999999;
+        }
+        tr{
+          width: 100%;
+          background: @white;
+          font-size: .14rem;
+        }
+        .progressNav{
+          height: .40rem;
+          box-sizing: border-box;
+          li{
+            height: .20rem;
+            line-height: .20rem;
+          }
+          .download-speed{
+            width: .8rem;
+            margin-left: .8rem;
+          }
+          .progressBar{
+            display: inline-block;
+            width: .80rem;
+            height: .08rem;
+            border-radius: .04rem;
+            background: #108ea0;
+          }
+        }
+      }
+    }
+
+    /*******聊天记录界面******/
+    .chatting-record{
+      width: 100%;
+      height: 100%;
+      .record-nav{
+        width: 100%;
+        heigth: .4rem;
+        line-height: .4rem;
+        color: @white;
+        padding-left: .2rem;
+        background: #00A3B9;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      .record-middle{
+        width: 7.4rem;
+        height: 6.4rem;
+        padding: 0 .3rem 0 .25rem;
+        overflow: auto;
+        box-sizing: border-box;
+        .person-talk{
+          width: 6.85rem;
+          ul{
+            overflow: hidden;
+            margin-top: .1rem;
+            &.your_talk{
+              text-align: right;
+            }
+            &.my_talk{
+              text-align: left;
+            }
+          }
+          li{
+            float: left;
+          }
+          li:nth-child(1),
+          li:nth-child(3){
+            width: .4rem;
+            height: .4rem;
+            img{
+              width: .4rem;
+              height: .4rem;
+              border-radius: 50%;
+            }
+          }
+          li:nth-child(2){
+            width: 5.65rem;
+            height: auto;
+            margin: 0 .2rem;
+            box-sizing: border-box;
+          }
+          li:nth-child(2) div{
+            background-color: #E3F4F6;
+          }
+          span:nth-child(2){
+            display: inline-block;
+            margin-top: .05rem;
+            padding: .05rem .2rem;
+            text-align:justify;
+            border-radius: .05rem;
+            background: #E3F4F6;
+          }
+          p.right-name{
+            text-align: right;
+          }
+        }
+      }
+      .page-turner{
+        width: 100%;
+        height: .66rem;
+        ul{
+          overflow:hidden;
+        }
+        li{
+          float:right;
+          cursor: pointer;
+        }
+        li:nth-child(1){
+          margin-right: .1rem;
+        }
+      }
+    }
+  }
+
+  /*******发起群聊 拉好友弹出框*******/
+  .modal{
+    position: relative;
+    //top: 50%;
+    //left: 50%;
+    width: 100%;
+    height: 7.6rem;
+    //margin-top: -3.8rem;
+    //margin-left: -5rem;
+    //border: .01rem solid @borderColor;
+    z-index: 5;
+    background: rgba(0,0,0,.3);
+    box-shadow: 0 0 .03rem #eee;
+  }
+  .modal-dialog{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -2.66rem;
+    margin-left: -2.2rem;
+    width: 4.4rem;
+    height: 5.32rem;
+    border-radius: .05rem;
+    background: #fff;
+  }
+  .modal-title{
+    width: 4.4rem;
+    height: .7rem;
+    border-radius: .05rem;
+    background: #F5F5F5;
+    p:nth-child(1){
+      position: relative;
+      width: 100%;
+      height: .3rem;
+      line-height: .3rem;
+      text-align: right;
+      i{
+        padding-right: .05rem;
+        color: #ccc;
+        font-size: .20rem;
+        &:hover{
+          color: #ddd;
+        }
+      }
+    }
+    p:nth-child(2){
+      width: 100%;
+      height: .4rem;
+      font-size: .16rem;
+      text-align: center;
+    }
+  }
+  .modal-main{
+    width: 4.4rem;
+    height: 3.82rem;
+    border-bottom: .01rem solid @borderColor;
+    box-sizing: border-box;
+    form{
+      position: relative;
+      width: 100%;
+      height: .6rem;
+      line-height: .6rem;
+    }
+    input#group_search{
+      width: 2.3rem;
+      height: .3rem;
+      padding-left: .4rem;
+      margin-left: .2rem;
+      border: .01rem solid @borderColor;
+      border-radius: .15rem;
+      background: #F5F5F5;
+    }
+    input#group_search1{
+      width: 2.3rem;
+      height: .3rem;
+      padding-left: .4rem;
+      margin-left: .2rem;
+      border: .01rem solid @borderColor;
+      border-radius: .15rem;
+      background: #F5F5F5;
+    }
+    i{
+      position: absolute;
+      top: 50%;
+      left: .3rem;
+      margin-top: -.3rem;
+      font-size: .2rem;
+    }
+    ul.modal-list{
+      width: 4rem;
+      height: 3.22rem;
+      margin-left: .4rem;
+      overflow: auto;
+      li{
+        position: relative;
+        width: 100%;
+        height: .4rem;
+        line-height: .4rem;
+        margin-bottom: .25rem;
+        b{
+          position: absolute;
+          top: 50%;
+          left: 0;
+          margin-top: -.1rem;
+          width: .2rem;
+          height: .2rem;
+          border: .01rem solid @borderColor;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+        img{
+          width: .4rem;
+          height: .4rem;
+          border-radius: 50%;
+          margin-left: .3rem;
+          margin-right: .2rem;
+        }
+        span{
+          font-size: .14rem;
+        }
+      }
+    }
+  }
+  .modal-bottom{
+    width: 4.4rem;
+    height: .8rem;
+    line-height: .8rem;
+    text-align: center;
+  }
+  .modalBtn{
+    width: 1.5rem;
+    height: .38rem;
+    color: #E3E3E3;
+    font-size: .16rem;
+    border: 0;
+    border-radius: .1rem;
+    background: #B6B6B6;
+  }
+}
+.layui-layer-dialog.addBox .layui-layer-content{
+  text-align: center;
+  line-height: 1rem;
+}
+// layui弹出层
+@outColor:     #00A2BB;
+@white:        #fff;
+
+.layui-layer-title{
+  padding: 0 0 0 .2rem!important;
+  height: .3rem!important;
+  line-height: .3rem!important;
+  border-bottom: .01rem solid #eee;
+  font-size: .14rem;
+  color: @white!important;
+  overflow: hidden;
+  background-color: @outColor!important;
+  border-radius: .02rem .02rem 0 0;
+}
+.layui-layer-setwin {
+  position: absolute;
+  right: .08rem!important;
+  top: .08rem!important;
+  font-size: 0;
+  line-height: initial;
+}
+.layui-layer-btn {
+  padding: 0 .1rem .12rem;
+}
+.layui-layer-btn a{
+  height: .23rem;
+  line-height: .23rem;
+  margin: 0 .06rem;
+  padding: 0 .26rem!important;
+  border:none!important;
+  color: @white!important;
+  border-radius: .2rem!important;
+  font-size: .12rem;
+  cursor: pointer;
+  text-decoration: none;
+  &:nth-of-type(1){
+    background: @outColor;
+  }
+  &:nth-of-type(2){
+    background: @msg;
+  }
+}
+.layui-layer-btn1{
+  color: #333!important;
+  //border: .01rem solid @outColor!important;
+}
+.layui-icon{
+  font-size: .28rem;
+  color: @outColor!important;
+  vertical-align: middle;
+}
+
+

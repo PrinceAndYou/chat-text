@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>聊天系统</title>
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=11,chrome=1">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="lib/layui/css/layui.css">
+</head>
+<body>
+    <div class="box">
+        <div class="boxLeft">
+           <!-- <svg xmlns="http://www.w3.org/2000/svg" width="130" height="80" version="1.1">
+                <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="rgb(0,100,255)" stroke-opacity="0.5" fill-opacity="0.5" />
+            </svg>-->
+            <header>
+                <img src="" alt="">
+                <span id="name"></span>
+                <svg class="icon setting" aria-hidden="true">
+                    <use xlink:href="#icon-shezhi"></use>
+                </svg>
+                <ul class="settingNav hide" data-name="settingNav">
+                    <li id="myMsg" data-name="my-message" onclick="Message(this)">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-person1"></use>
+                        </svg>
+                        <span> 我的信息</span>
+                    </li>
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-wuxing1"></use>
+                        </svg>
+                        <span onclick="addFriendBtn()"> 更换主题</span>
+                    </li>
+                    <li class="yingYong" style="position: relative;">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-icon71"></use>
+                        </svg>
+                        <span id="nv" > 应用管理&nbsp;<span></span></span>
+                        <ul class="settingNav2"  data-name="settingNav">
+                            <li>更换主题</li>
+                            <li>更换主题</li>
+                            <li>更换主题</li>
+                            <li>更换主题</li>
+                            <li>更换主题</li>
+                            <li>更换主题</li>
+                            <li>更换主题</li>
+                            <li>更换主题</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-tuichu1"></use>
+                        </svg>
+                        <span class="exit"> 退 出</span>
+                    </li>
+                </ul>
+                <div class="headerMsg">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+                <div class="msg">
+                    <p>刘警官</p>
+                    <p>15155545554</p>
+                    <p>行政部</p>
+                </div>
+            </header>
+            <div class="search">
+                <input class="searchText" type="text" placeholder="请输入搜索内容">
+                <svg class="icon searchbtn" aria-hidden="true">
+                    <use xlink:href="#icon-tubiaozongjie30"></use>
+                </svg>
+                <ul class="mohuSearch scrollbar-style" style="display: none">
+
+                </ul>
+            </div>
+            <ul class="nav">
+                <li>
+                    <svg class="icon navIcon" name="person" aria-hidden="true">
+                        <use xlink:href="#icon-person1"></use>
+                    </svg>
+                </li>
+                <li>
+                    <svg class="icon navIcon" name="qun" aria-hidden="true">
+                        <use xlink:href="#icon-qunzu1"></use>
+                    </svg>
+                </li>
+                <li>
+                    <svg class="icon navIcon" name="chat" aria-hidden="true">
+                        <use xlink:href="#icon-liaotian1"></use>
+                    </svg>
+                </li>
+                <li>
+                    <svg id="add" class="icon navIcon" name="add" aria-hidden="true">
+                        <use xlink:href="#icon-jiahao1"></use>
+                    </svg>
+                </li>
+            </ul>
+            <ul class="content person">
+
+            </ul>
+            <ul class="content qun">
+                <li>
+                    <img src="img/test1.jpg" alt="">
+                    <span data-name="1">侦察一群</span>
+                    <svg class="icon cancel" aria-hidden="true">
+                        <use xlink:href="#icon-guanbi1"></use>
+                    </svg>
+                </li>
+                <li>
+                    <img src="img/test2.jpg" alt="">
+                    <span data-name="2">侦察二群</span>
+                    <svg class="icon cancel" aria-hidden="true">
+                        <use xlink:href="#icon-guanbi1"></use>
+                    </svg>
+                </li>
+                <li>
+                    <img src="img/test3.jpg" alt="">
+                    <span data-name="3">侦察三群</span>
+                    <svg class="icon cancel" aria-hidden="true">
+                        <use xlink:href="#icon-guanbi1"></use>
+                    </svg>
+                </li>
+                <li>
+                    <img src="img/test4.jpg" alt="">
+                    <span data-name="4">侦察四群</span>
+                    <svg class="icon cancel" aria-hidden="true" mime-type="">
+                        <use xlink:href="#icon-guanbi1"></use>
+                    </svg>
+                </li>
+            </ul>
+            <ul class="content chat">
+                <li class="yanzheng">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-shengyin"></use>
+                    </svg>
+                    <span>验证信息</span>
+                    <i>3</i>
+                </li>
+                <li>
+                    <img src="img/test1.jpg" alt="">
+                    <span><b>刘警官</b> <br/>
+                        <em>哈哈哈哈</em>
+                    </span>
+                    <i>3</i>
+                </li>
+                <li>
+                    <img src="img/test2.jpg" alt="">
+                    <span><b>赵警官</b> <br/>
+                        <em>哈哈哈哈</em></span>
+                    <i>2</i>
+                </li>
+                <li>
+                    <img src="img/test3.jpg" alt="">
+                    <span><b>侦察一群</b> <br/>
+                        <em>哈哈哈哈</em></span>
+                    <i>5</i>
+                </li>
+                <li>
+                    <img src="img/test4.jpg" alt="">
+                    <span><b>侦察二群</b> <br/>
+                        <em>哈哈哈哈</em></span>
+                    <i>1</i>
+                </li>
+            </ul>
+            <ul class="content add">
+            </ul>
+            <footer></footer>
+        </div>
+        <div class="boxRight">
+            <div style="display: none" class="add1 close">
+                <header>
+                    <p>添加朋友</p>
+                </header>
+                <div class="friendTest">
+                    <span>好友验证</span>
+                </div>
+                <div class="friendTestContent">
+                    <ul class="friendTestMsg">
+                        <li>
+                            <p>今天</p>
+                            <div>
+                                <img src="img/test1.jpg"/>
+                                <p>
+                                    <span>刘明</span>
+                                    <br/>
+                                    <span>15588886666</span>
+                                </p>
+                                <button class="no">拒绝</button>
+                                <button class="yes">同意</button>
+                            </div>
+                        </li>
+                        <li>
+                            <p>2017/1/21</p>
+                            <div>
+                                <img src="img/test4.jpg"/>
+                                <p>
+                                    <span>小明</span>
+                                    <br/>
+                                    <span>15588886666</span>
+                                </p>
+                                <button class="no">已拒绝</button>
+                            </div>
+                        </li>
+                        <li>
+                            <p>2017/1/20</p>
+                            <div>
+                                <img src="img/test3.jpg" />
+                                <p>
+                                    <span>小红</span>
+                                    <br/>
+                                    <span>请求加入<i>侦察群</i></span>
+                                    <br/>
+                                    <span>附加消息：<i>呵呵</i></span>
+                                </p>
+                                <button class="yes">已同意</button>
+                            </div>
+                        </li>
+                        <li>
+                            <p>2017/1/16</p>
+                            <div>
+                                <img src="img/test2.jpg"/>
+                                <p>
+                                    <span>小紫</span>
+                                    <br/>
+                                    <span>15588886666</span>
+                                </p>
+                                <button class="no">已拒绝</button>
+                            </div>
+                        </li>
+                    </ul>
+                    <em>清空列表</em>
+                </div>
+            </div>
+            <div id="addFriend" style="display: none" class="addfriend close">
+                <header>
+                    <span>找人 <i></i></span>
+                    <span>找群</span>
+                </header>
+                <div class="searchPeople" style="position: relative;">
+                    <input type="text" class="searchInput" id="friendInput" placeholder="请输入用户账号/昵称">
+                    <i class="search-delete">×</i>
+                </div>
+                <button>查找</button>
+                <ul  class="searchContent scrollbar-style">
+
+                </ul>
+            </div>
+            <div id="addQun" style="display: none" class="addfriend close">
+                <header>
+                    <span>找人</span>
+                    <span>找群 <i></i></span>
+                </header>
+                <div class="searchgroup" style="position: relative;">
+                    <input type="text" class="searchInput" id="groupInput" placeholder="请输入群账号/昵称">
+                    <i class="search-delete">×</i>
+                </div>
+
+                <button>查找</button>
+                <ul class="searchContent scrollbar-style">
+
+                </ul>
+            </div>
+            <!-- *********个人信息状态******* -->
+            <div class="top-content close">
+                <span>详细信息</span>
+            </div>
+            <!-- ********中间内容部分******** -->
+            <div class="main-content close">
+
+                <!-- ???*********提示信息**********??? -->
+                <span class="prompt-message close">
+                    请点击朋友查看详情！
+                </span>
+
+
+                <!-- ???******侦查群详细信息******??? -->
+                <div class="two-groupPerson close" style="display: none">
+                    <!-- 添加区域 -->
+                    <ul class="addArea scrollbar-style" id="group_addArea">
+
+                        <!--<li>-->
+                        <!--<dl>-->
+                        <!--<dt>-->
+                        <!--<img src="img/p1_l.jpg" alt="">-->
+                        <!--</dt>-->
+                        <!--<dd>刘警官</dd>-->
+                        <!--</dl>-->
+                        <!--</li>-->
+                        <!-- ******AJAX请求获得好友数据***** -->
+                        <div class="addBtn showQunModalBox" >
+                            <i class="layui-icon" id="showQunModalBtn">&#xe608;</i>
+                        </div>
+                    </ul>
+                    <!-- 群信息区域 -->
+                    <div class="group-detail">
+                        <ul>
+                            <li id="groupName"><i class="layui-icon">&#xe613;</i>&nbsp;&nbsp;<span>侦查一群</span></li>
+                            <li><i class="layui-icon">&#xe642;</i>&nbsp;&nbsp;<span id="search_record">查找聊天记录</span></li>
+                            <li><i class="layui-icon">&#xe624;</i>&nbsp;&nbsp;<span id="search_file">聊天文件</span></li>
+                            <li class="allBtn">
+                                <button id="group_sendBtn">发消息</button>
+                                <button id="group_deleteBtn">删除</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ???********我的信息********??? -->
+                <div class="my-message message close" id="my_message" style="display: none">
+                    <dl>
+                        <dt>
+                            <img src="img/p1_l.jpg" alt="">
+                        </dt>
+                        <dd>阿警官</dd>
+                        <dd>13402202685</dd>
+                        <dd>行政部</dd>
+                    </dl>
+                    <div class="allBtn" id="myContentMsg">
+                        <button id="myChangeBtn" class="yanse">修改</button>
+                        <button id="mySureBtn" class="yanse">确定</button>
+                    </div>
+                    <!--<div class="allBtn" id="firendContentMsg" style="display: none;width: .8rem;">-->
+                        <!--<button id="myAddFirendBtn" style="margin: 0">添加</button>-->
+                    <!--</div>-->
+                </div>
+                <!-- ???********陌生好友信息********??? -->
+                <div class="friend-message message close" id="friend_message" style="display: none">
+                    <dl>
+                        <dt>
+                            <img src="img/p1_l.jpg" alt="">
+                        </dt>
+                        <dd>阿警官</dd>
+                        <dd>13402202685</dd>
+                        <dd>行政部</dd>
+                    </dl>
+                    <div class="allBtn" id="firendContentMsg" style="width: .8rem;">
+                        <button id="myAddFirendBtn" style="margin: 0">添加</button>
+                    </div>
+                </div>
+                <!-- ???********陌生好友信息********??? -->
+                <div class="myFriend-message message close" id="myFriend_message" style="">
+                    <dl>
+                        <dt>
+                            <img src="img/p1_l.jpg" alt="">
+                        </dt>
+                        <dd>阿警官</dd>
+                        <dd>13402202685</dd>
+                        <dd>行政部</dd>
+                    </dl>
+                    <div class="allBtn" id="myFriendContentMsg">
+                        <button id="myFriendChangeBtn" class="yanse">修改</button>
+                        <button id="myFriendSureBtn" class="yanse">确定</button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- ???********刘警官个人聊天窗口********??? -->
+            <div class="one-chatting close" style="display: none">
+                <div class="chatting-top">
+                    <span>刘警官</span>
+                    <i class="layui-icon" id="pullIcon">&#xe61a;</i>
+                    <ul class="addArea scrollbar-style close" id="chatting_addArea" style="display: none">
+                        <li class="addBtn">
+                            <i class="layui-icon" id="showModalBtn">&#xe608;</i>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>
+                                    <img src="img/p1_l.jpg" alt="">
+                                </dt>
+                                <dd>刘警官</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>
+                                    <img src="img/p1_l.jpg" alt="">
+                                </dt>
+                                <dd>刘警官</dd>
+                            </dl>
+                        </li>
+                        <!-- ******AJAX请求获得好友数据***** -->
+
+                    </ul>
+                </div>
+                <div class="chatting-middle scrollbar-style">
+                    <div class="person-talk" id="person-talk">
+
+                    </div>
+                </div>
+                <div class="chatting-bottom">
+                    <ul>
+                        <li>
+                            <svg class="icon chatting-icon" aria-hidden="true">
+                                <use xlink:href="#icon-wenjian"></use>
+                            </svg>
+                        </li>
+                        <li>
+                            <svg class="icon chatting-icon" aria-hidden="true">
+                                <use xlink:href="#icon-x-image-copy"></use>
+                            </svg>
+                        </li>
+                        <li class="biaoqing">
+                            <svg class="icon chatting-icon" aria-hidden="true">
+                                <use xlink:href="#icon-biaoqing"></use>
+                            </svg>
+                        </li>
+                        <li>
+                            <svg class="icon chatting-icon" aria-hidden="true">
+                                <use xlink:href="#icon-jianqie"></use>
+                            </svg>
+                        </li>
+                        <li>
+                            <svg class="icon chatting-icon" aria-hidden="true">
+                                <use xlink:href="#icon-yuyin"></use>
+                            </svg>
+                        </li>
+                        <li>
+                            <svg class="icon chatting-icon" aria-hidden="true">
+                                <use xlink:href="#icon-shipin"></use>
+                            </svg>
+                        </li>
+                    </ul>
+                    <textarea autofocus class="sendText scrollbar-style" id="send_text"  contenteditable="true" onkeypress="boxRight.back();"></textarea>
+                    <div class="send-btn">
+                        <button class="layui-btn sendBtn" id="send_btn">发送</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ???*************文件界面*************??? -->
+            <div class="file-view close" style="display: none;">
+                <div class="top-content">
+                    <span>详细信息</span>
+                </div>
+                <div class="file-nav">
+                    <span>文件</span>
+                    <form action="">
+                        <i class="layui-icon">&#xe615;</i>
+                        <input id="file_input" class="file-input" type="text" placeholder="搜索">
+                    </form>
+                    <button class="upBtn">
+                        上传
+                    </button>
+                </div>
+                <!-- 标题 -->
+                <div class="file-content scrollbar-style">
+                    <table class="layui-table file-table">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th>更新时间</th>
+                            <th>上传者</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="fileBottom"></div>
+            </div>
+
+            <!-- ???********聊天记录界面********??? -->
+            <div class="chatting-record close" style="display: none;">
+                <!-- <div class="top-content">
+                    <span>详细信息</span>
+                </div> -->
+                <div class="record-nav">
+                    <span>聊天记录</span>
+                </div>
+                <div class="record-middle scrollbar-style">
+                    <div class="person-talk" id="person_talk">
+                        <ul class="your_talk">
+                            <li></li>
+                            <li>
+                                <p class="right-name">刘警官</p>
+                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem quod facere praesentium odit. Repellat porro et laudantium, atque similique distinctio, nemo quidem obcaecati aut possimus, voluptatibus dignissimos facilis sit. Qui.</span>
+                            </li>
+                            <li>
+                                <img src="img/p1_l.jpg" alt="">
+                            </li>
+                        </ul>
+                        <ul class="your_talk">
+                            <li></li>
+                            <li>
+                                <p class="right-name">刘警官</p>
+                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem quod facere praesentium odit. Repellat porro et laudantium, atque similique distinctio, nemo quidem obcaecati aut possimus, voluptatibus dignissimos facilis sit. Qui.</span>
+                            </li>
+                            <li>
+                                <img src="img/p1_l.jpg" alt="">
+                            </li>
+                        </ul>
+                        <ul class="your_talk">
+                            <li></li>
+                            <li>
+                                <p class="right-name">刘警官</p>
+                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem quod facere praesentium odit. Repellat porro et laudantium, atque similique distinctio, nemo quidem obcaecati aut possimus, voluptatibus dignissimos facilis sit. Qui.</span>
+                            </li>
+                            <li>
+                                <img src="img/p1_l.jpg" alt="">
+                            </li>
+                        </ul>
+
+                        <ul class="my_talk">
+                            <li>
+                                <img src="img/p2_l.jpg" alt="">
+                            </li>
+                            <li>
+                                <p class="left-name">刘警官</p>
+                                <span>我是库里打人男子随即批捕，但是他否认在酒吧的攻击行为。</span>
+                            </li>
+                            <li></li>
+                        </ul>
+
+                        <ul class="your_talk">
+                            <li></li>
+                            <li>
+                                <p class="right-name">刘警官</p>
+                                <span>hello world酒吧的攻击行为</span>
+                            </li>
+                            <li>
+                                <img src="img/p1_l.jpg" alt="">
+                            </li>
+                        </ul>
+
+                        <ul class="my_talk">
+                            <li>
+                                <img src="img/p2_l.jpg" alt="">
+                            </li>
+                            <li>
+                                <p class="left-name">刘警官</p>
+                                <span>浙江杭州</span>
+                            </li>
+                            <li></li>
+                        </ul>
+
+                        <ul class="your_talk">
+                            <li>
+
+                            </li>
+                            <li>
+                                <p class="left-name">刘警官</p>
+                                <span>我是库里打人男子随即批捕，但是他否认在酒吧的攻击行为。</span>
+                            </li>
+                            <li>
+                                <img src="img/p1_l.jpg" alt="">
+                            </li>
+                        </ul>
+
+                        <ul class="my_talk">
+                            <li>
+                                <img src="img/p2_l.jpg" alt="">
+                            </li>
+                            <li>
+                                <p class="left-name">刘警官</p>
+                                <span>我是库里打人男子随即批捕，但是他否认在酒吧的攻击行为。</span>
+                            </li>
+                            <li></li>
+                        </ul>
+
+                        <ul class="your_talk">
+                            <li>
+
+                            </li>
+                            <li>
+                                <p class="left-name">刘警官</p>
+                                <span>我是库里打人男子随即批捕，但是他否认在酒吧的攻击行为。</span>
+                            </li>
+                            <li>
+                                <img src="img/p1_l.jpg" alt="">
+                            </li>
+                        </ul>
+
+                        <ul class="my_talk">
+                            <li>
+                                <img src="img/p2_l.jpg" alt="">
+                            </li>
+                            <li>
+                                <p class="left-name">刘警官</p>
+                                <span>我是库里打人男子随即批捕，但是他否认在酒吧的攻击行为。</span>
+                            </li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 底部翻页器 -->
+                <!--<div class="page-turner">-->
+                    <!--<ul>-->
+                        <!--<li>-->
+                            <!--<svg class="icon chatting-icon" aria-hidden="true">-->
+                                <!--<use xlink:href="#icon-weiye1"></use>-->
+                            <!--</svg>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<svg class="icon chatting-icon" aria-hidden="true">-->
+                                <!--<use xlink:href="#icon-iconfont_hexinhu"></use>-->
+                            <!--</svg>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<svg class="icon chatting-icon" aria-hidden="true">-->
+                                <!--<use xlink:href="#icon-iconfont_hexinhu1"></use>-->
+                            <!--</svg>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<svg class="icon chatting-icon" aria-hidden="true">-->
+                                <!--<use xlink:href="#icon-weiye"></use>-->
+                            <!--</svg>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            </div>
+
+
+            <!--box-right div-->
+        </div>
+        <!-- 发起群聊 拉好友弹出框 -->
+        <div class="modal close" id="modal" style="display: none">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-title">
+                        <p>
+                            <i class="layui-icon" id="delete_icon">&#x1006;</i>
+                        </p>
+                        <p>发起群聊</p>
+                    </div>
+
+                    <div class="modal-main">
+                        <form action="">
+                            <i class="layui-icon">&#xe615;</i>
+                            <input type="text" id="group_search" class="placeholder-style" placeholder="搜索">
+                        </form>
+                        <ul class="modal-list scrollbar-style" id="group_list">
+                            <li>
+                                <b></b>
+                                <img src="img/p1_l.jpg" alt="">
+                                <span>白警官</span>
+                            </li>
+                            <li>
+                                <b></b>
+                                <img src="img/p2_l.jpg" alt="">
+                                <span>刘警官</span>
+                            </li>
+                            <li>
+                                <b></b>
+                                <img src="img/p1_l.jpg" alt="">
+                                <span>白警官</span>
+                            </li>
+                            <li>
+                                <b></b>
+                                <img src="img/p2_l.jpg" alt="">
+                                <span>刘警官</span>
+                            </li>
+                            <li>
+                                <b></b>
+                                <img src="img/p1_l.jpg" alt="">
+                                <span>白警官</span>
+                            </li>
+                            <li>
+                                <b></b>
+                                <img src="img/p2_l.jpg" alt="">
+                                <span>哈警官</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal-bottom">
+                        <button id="modalBtn" class="modalBtn">
+                            确认
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 群界面添加人员 弹出框 -->
+        <div class="modal close" id="modal1" style="display: none">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-title">
+                        <p>
+                            <i class="layui-icon" id="delete_icon1">&#x1006;</i>
+                        </p>
+                        <p>添加好友</p>
+                    </div>
+
+                    <div class="modal-main">
+                        <form action="">
+                            <i class="layui-icon">&#xe615;</i>
+                            <input type="text" id="group_search1" class="placeholder-style" placeholder="搜索">
+                        </form>
+                        <ul class="modal-list scrollbar-style" id="group_list1">
+                            <li>
+                                <b></b>
+                                <img src="img/p1_l.jpg" alt="">
+                                <span>白警官</span>
+                            </li>
+                            <li>
+                                <b></b>
+                                <img src="img/p2_l.jpg" alt="">
+                                <span>刘警官</span>
+                            </li>
+                            <li>
+                                <b></b>
+                                <img src="img/p1_l.jpg" alt="">
+                                <span>白警官</span>
+                            </li>
+                            <li>
+                                <b></b>
+                                <img src="img/p2_l.jpg" alt="">
+                                <span>刘警官</span>
+                            </li>
+                            <li>
+                                <b></b>
+                                <img src="img/p1_l.jpg" alt="">
+                                <span>白警官</span>
+                            </li>
+                            <li>
+                                <b></b>
+                                <img src="img/p2_l.jpg" alt="">
+                                <span>哈警官</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal-bottom">
+                        <button id="modalBtn1" class="modalBtn">
+                            确认
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="iconfont/iconfont.js"></script>
+    <script src="js/fontSize.js"></script>
+    <script src="js/command.js"></script>
+    <script src="lib/jquery-2.1.0.js"></script>
+    <script src="lib/jquery.qqFace.js"></script>
+    <script src="lib/jquery-browser.js"></script>
+    <script src="lib/layui/lay/dest/layui.all.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
